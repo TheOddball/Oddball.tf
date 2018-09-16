@@ -40,11 +40,6 @@ gulp.task('images2', function() {
       .pipe(gulp.dest('./out/img/shared/favicon'));
 });
 
-gulp.task('fonts', function() {
-   return gulp.src('./fonts/*')
-      .pipe(gulp.dest('./out/fonts/'));
-});
-
 gulp.task('email', function() {
       return gulp.src('./email/*')
          .pipe(gulp.dest('./out/email/'));
@@ -55,7 +50,7 @@ gulp.task('misc', function() {
          .pipe(gulp.dest('./out/'));
 });
 
-gulp.task('default', gulp.series('html', 'images', 'fonts', 'images2', 'misc', 'email', function() {
+gulp.task('default', gulp.series('html', 'images', 'images2', 'misc', 'email', function() {
    return gulp.src('./out/img/shared/github-512.png', {
          read: true
       })

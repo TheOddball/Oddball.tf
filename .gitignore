@@ -1,0 +1,4 @@
+build
+*.html
+!index.html
+.htaccess

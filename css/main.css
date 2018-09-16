@@ -1,0 +1,110 @@
+/* Previous code for the use of fonts on the website. Required local font files.
+ * Fixed with latest change to code.
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto 900.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Light.ttf") format("truetype");
+    font-weight: normal;
+}*/
+
+/* NOTE: Most of these things should not be tinkered with. Read the comments. */
+body {
+    font-family: 'Roboto', Helvetica, Arial, sans-serif; /* Only if you know font families. If you like helvetica over roboto, just remove 'Roboto'.*/
+    font-weight: 300;
+    color: #9F6BCF; /* Changes text color. Changing it clashes with icons, however. */
+    background-color: #372254;  /* Changes background color. Preferably you change the text color in botting to whatever you change this to, to prevent clashing. */
+    font-size: 100%; /* Changes default size of text. Doesn't change most text. Tweak with it if you'd like. */
+    margin: 0;
+    padding: 0;
+}
+
+/* Hands off of this one. Tweaking this will fuck up the jQuery animations. Skip to the next comment. */
+.main {
+    position: relative;
+    transform: translateY(25%);
+    text-align: center;
+    top: 45%;
+}
+
+.topping > .container-top {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 50%;
+    max-width: 75%;
+}
+
+.summary {
+    min-height: 75vh;
+}
+
+.summary > h1 {
+    font-weight: 900;
+    font-size: 750%;
+}
+
+h3 {
+    font-size: 250%;
+}
+
+.list-group {
+    text-align: center;
+}
+
+ul {
+    padding: 15px 0 15px 0;
+}
+
+ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 25px;
+    margin-right: 0px;
+
+}
+
+ul li:first-child {
+    margin: 0;
+}
+
+ul li img {
+    width: 128px;
+}
+/* Everything up of here until the previous comment should not be touched. */
+
+.botting {
+    background-color: #555555; /* Changing this clashes with the white icons. Change if you feel adventurous. */
+    color: #555555; /* Change this to the same color as the body's background if you want to prevent clashing. */
+}
+/* Hands off the shit below here. */
+
+table {
+    padding: 0;
+    margin: 10px auto auto auto;
+}
+
+.about > .container {
+    padding: 10px 25px 10px 25px;
+}
+
+
+table tr td:first-child {
+    text-align: left;
+}
+
+table tr td:last-child {
+    text-align: right;
+}
+
+.container-bot {
+    font-size: 175%;
+    margin: 25px auto 25px auto;
+    padding: 25px 0 25px 0;
+    width: 50%;
+    overflow: hidden;
+}

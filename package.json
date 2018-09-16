@@ -1,0 +1,26 @@
+{
+  "name": "oddball.tf",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "gulp"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-concat-css": "^2.1.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-minify-html": "~1.0.0",
+    "gulp-rimraf": "^0.1.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uncss": "^1.0.6",
+    "gulp-useref": "^3.1.5"
+  },
+  "dependencies": {
+    "cssnano": "^3.10.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.2",
+    "postcss-uncss": "^0.16.1",
+    "static-server": "^2.2.0",
+    "uncss": "^0.16.2"
+  }
+}

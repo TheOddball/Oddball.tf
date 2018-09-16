@@ -45,7 +45,17 @@ gulp.task('fonts', function() {
       .pipe(gulp.dest('./out/fonts/'));
 });
 
-gulp.task('default', gulp.series('html', 'images', 'fonts', 'images2', function() {
+gulp.task('email', function() {
+      return gulp.src('./email/*')
+         .pipe(gulp.dest('./out/email/'));
+});
+
+gulp.task('misc', function() {
+      return gulp.src('.htaccess', 'googleead1d9329524274a.html',)
+         .pipe(gulp.dest('./out/'));
+});
+
+gulp.task('default', gulp.series('html', 'images', 'fonts', 'images2', 'misc', 'email', function() {
    return gulp.src('./out/img/shared/github-512.png', {
          read: true
       })

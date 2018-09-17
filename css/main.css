@@ -21,6 +21,7 @@ body {
   #avatar {
     height: 175px;
     width: 175px;
+    border-radius: 100px;
   }
   .topping > .container-top {
     margin-left: auto;

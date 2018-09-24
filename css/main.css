@@ -3,10 +3,10 @@ body {
     font-weight: 300;
     color: #fff;
     background-image: url(./img/shared/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     filter: drop-shadow( 10px 10px 10px black);
-    background-color: #000;
-    background-repeat: repeat-y;
-    background-position: center center;
     font-size: 100%;
     margin: 0;
     padding: 0;

@@ -1,19 +1,22 @@
 var gulp = require('gulp');
-var uncss = require('gulp-uncss');
+var postcss = require('gulp-postcss');
+var uncss = require('postcss-uncss');
 var concat = require('gulp-concat');
 var concatCss = require('gulp-concat-css');
 var csso = require('gulp-csso');
-var uglify = require('gulp-uglify');
 var useref = require('gulp-useref');
+var uglify = require('gulp-uglify');
 var htmlmin = require('gulp-minify-html');
 var rimraf = require('gulp-rimraf');
-var fs = require('fs');
 
 gulp.task('css1', function() {
-   return gulp.src(['./css/main.css'])
-      .pipe(uncss({
-         html: ['index.html']
-      }))
+   var plugins = [
+      uncss({
+          html: ['index.html']
+      }),
+  ];
+  return gulp.src(['./css/main.css'])
+      .pipe(postcss(plugins))
       .pipe(concatCss('main.css'))
       .pipe(csso())
       .pipe(gulp.dest('./out'));

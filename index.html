@@ -7,10 +7,12 @@
   <meta name=description content="Website of The Oddball">
   <meta property=og:title content=Oddball.tf>
   <meta property=og:type content=website>
-  <meta property=og:image content="img/shared/favicon/transparent_logo-1.png">
+  <meta property=og:image content="https://i.oddball.tf/QaI2n.png">
   <meta property=og:url content="http://oddball.tf/">
   <meta property=og:description content="Website of The Oddball">
-  <link rel=stylesheet href=./main.css>
+  <!-- build:css ./main.css -->
+  <link rel=stylesheet href=./css/main.css>
+  <!-- endbuild -->
   <link href="https://fonts.googleapis.com/css?family=Product+Sans%3A100%2C100i%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C700%2C700i%2C900%2C900i" rel=stylesheet type=text/css>
   <link rel=apple-touch-icon sizes=180x180 href="img/shared/favicon/apple-touch-icon.png">
   <link rel=icon type=image/png sizes=32x32 href="img/shared/favicon/favicon-32x32.png">
@@ -22,7 +24,10 @@
   <meta name=application-name content=Oddball.tf>
   <meta name=msapplication-config content="img/shared/favicon/browserconfig.xml">
   <meta name=theme-color content=#9f6bcf>
-  <script src=./main.js></script>
+  <!-- build:js ./main.js -->
+  <script src=./js/jquery-1.11.3.min.js></script>
+  <script src=./js/main.js></script>
+  <!-- endbuild -->
 </head>
 
 <body>
@@ -57,7 +62,7 @@
     (i[r].q = i[r].q || []).push(arguments)
   }, i[r].l = 1 * new Date(); a = s.createElement(o),
     m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
   ga('create', 'UA-53535626-2', 'auto');
   ga('send', 'pageview');

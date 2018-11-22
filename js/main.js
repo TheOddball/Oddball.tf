@@ -1,8 +1,14 @@
-$(document).ready(function(){
+$(document).ready(function () {
     $('.main')
-        .css({'opacity': 0,'top': 500})
-        .animate(
-            {opacity: 1, top: 0},
-            {queue: false, duration: 1000}
-        );
+        .css({
+            'opacity': 0,
+            'top': 500
+        })
+        .animate({
+            opacity: 1,
+            top: 0
+        }, {
+            queue: false,
+            duration: 1000
+        });
 });

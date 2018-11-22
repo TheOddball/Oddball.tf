@@ -7,15 +7,15 @@ var htmlmin = require('gulp-minify-html');
 var pug = require('gulp-pug');
 var stylus = require('gulp-stylus');
 
-gulp.task('stylus', function(){
-      return gulp.src(['./css/main.styl'])
+gulp.task('stylus', function () {
+      return gulp.src(['./css/*.styl'])
             .pipe(stylus())
             .pipe(csso())
             .pipe(gulp.dest('./out'))
 });
 
 gulp.task('js', function () {
-      return gulp.src(['./js/jquery-1.11.3.min.js', './js/main.js'])
+      return gulp.src(['./js/*.js'])
             .pipe(concat('main.js'))
             .pipe(uglify())
             .pipe(gulp.dest('./out'));

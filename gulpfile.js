@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 var csso = require('gulp-csso');
-var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
 var htmlmin = require('gulp-minify-html');
 var pug = require('gulp-pug');
@@ -23,10 +22,7 @@ gulp.task('js', function () {
 
 gulp.task('html', function () {
       return gulp.src(['index.pug'])
-            .pipe(pug({
-                  pretty: true
-            }))
-            .pipe(useref())
+            .pipe(pug())
             .pipe(htmlmin())
             .pipe(gulp.dest('./out'));
 });

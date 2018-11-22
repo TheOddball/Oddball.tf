@@ -1,55 +1,63 @@
-body 
-	font-family "Product Sans", Helvetica, Arial, sans-serif
-	font-weight 300
-	color #fff
-	background-image url(./img/shared/bg.jpg)
-	background-repeat no-repeat
-	background-size cover
-	background-position center
-	filter drop-shadow( 10px 10px 10px black)
-	font-size 100%
-	margin 0
-	padding 0
-	overflow hidden
-.main 
-	position relative
-	transform translateY(25%)
-	text-align center
-	top 45%
-#avatar 
-	height 175px
-	width 175px
-	border-radius 100px
-.topping 
-	& > .container-top 
-		margin-left auto
-		margin-right auto
-		min-width 50%
-		max-width 75%
-.summary 
-	min-height 75vh
-	& > h1 
-		font-weight 900
-		font-size 650%
-h3 
-	font-size 250%
-h1 
-	margin 0px
-	font-size 650%
-.list-group 
-	text-align center
-ul 
-	padding 0px
-	li 
-		list-style-type none
-		display inline-block
-		margin-left 25px
-		margin-right 0
-		&:first-child 
-			margin 0
-		img 
-			width 125px
-			opacity .8
-			transition all .4s ease-in-out
-			&:hover 
-				transform scale(1.025)
+body
+  overflow hidden
+  margin 0
+  padding 0
+  filter drop-shadow(10px 10px 10px black)
+  background-image url('./img/shared/bg.jpg')
+  background-position center
+  background-size cover
+  background-repeat no-repeat
+  color #fff
+  font-weight 300
+  font-size 100%
+  font-family 'Product Sans', Helvetica, Arial, sans-serif
+
+.main
+  position relative
+  top 45%
+  text-align center
+  transform translateY(25%)
+
+#avatar
+  width 175px
+  height 175px
+  border-radius 100px
+
+.topping
+  & > .container-top
+    margin-right auto
+    margin-left auto
+    min-width 50%
+    max-width 75%
+
+.summary
+  min-height 75vh
+  & > h1
+    font-weight 900
+    font-size 650%
+
+h3
+  font-size 250%
+
+h1
+  margin 0
+  font-size 650%
+
+.list-group
+  text-align center
+
+ul
+  padding 0
+  li
+    display inline-block
+    margin-right 0
+    margin-left 25px
+    list-style-type none
+    &:first-child
+      margin 0
+    img
+      width 125px
+      opacity 0.8
+      transition all 0.4s ease-in-out
+      &:hover
+        transform scale(1.025)

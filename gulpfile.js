@@ -28,15 +28,10 @@ gulp.task('html', function () {
 });
 
 gulp.task('images', function () {
-      return gulp.src('./img/shared/*')
-            .pipe(gulp.dest('./out/img/shared'));
-});
-
-gulp.task('images2', function () {
-      return gulp.src('./img/shared/favicon/*')
-            .pipe(gulp.dest('./out/img/shared/favicon'));
+      return gulp.src('./img/site/**')
+            .pipe(gulp.dest('./out/img/site'));
 });
 
 gulp.task('page', gulp.series('html', 'stylus', 'js'))
 
-gulp.task('default', gulp.parallel('page', 'images', 'images2'));
+gulp.task('default', gulp.parallel('page', 'images'));

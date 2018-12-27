@@ -8,10 +8,11 @@ jobs:
       - checkout
       - run:
           name: Install Dependencies
-          command: yarn install
+          command: npm i
       - run: rm -rf out
       - run: mkdir out
-      - run: /usr/local/bin/yarn build
+      - run: eslint --fix ./js/main.js
+      - run: npm run build
       - persist_to_workspace:
           root: ~/oddball
           paths:

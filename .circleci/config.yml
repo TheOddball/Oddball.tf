@@ -11,7 +11,6 @@ jobs:
           command: npm i
       - run: rm -rf out
       - run: mkdir out
-      - run: eslint --fix ./js/main.js
       - run: npm run build
       - persist_to_workspace:
           root: ~/oddball

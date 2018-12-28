@@ -6,10 +6,12 @@ var htmlmin = require("gulp-minify-html");
 var pug = require("gulp-pug");
 var stylus = require("gulp-stylus");
 var imagemin = require('gulp-imagemin');
+var concatCss = require('gulp-concat-css');
 
 gulp.task("stylus", function () {
 	return gulp.src(["./css/*.styl"])
 		.pipe(stylus())
+		.pipe(concatCss("main.css"))
 		.pipe(csso())
 		.pipe(gulp.dest("./out"));
 });

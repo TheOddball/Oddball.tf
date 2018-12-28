@@ -11,7 +11,7 @@ function hasWebP() {
 	var rv = $.Deferred(), img = new Image();
 	img.onload = function() { rv.resolve(); };
 	img.onerror = function() { rv.reject(); };
-	img.src = "http://www.gstatic.com/webp/gallery/1.webp";
+	img.src = "https://www.gstatic.com/webp/gallery/1.webp";
 	return rv.promise();
 }
 

@@ -4,7 +4,8 @@ var bgs = [
 	"./img/site/backgrounds/bg2.",
 	"./img/site/backgrounds/bg3.",
 	"./img/site/backgrounds/bg4.",
-	"./img/site/backgrounds/bg5.",    
+	"./img/site/backgrounds/bg5.",
+	"./img/site/backgrounds/bg6."
 ];
 
 function hasWebP() {

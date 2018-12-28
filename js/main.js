@@ -1,13 +1,32 @@
 var bgs = [
-	"./img/site/backgrounds/bg.jpg",
-	"./img/site/backgrounds/bg1.jpg",
-	"./img/site/backgrounds/bg2.jpg",
-	"./img/site/backgrounds/bg3.jpg",
-	"./img/site/backgrounds/bg4.png",
-	"./img/site/backgrounds/bg5.jpg",    
+	"./img/site/backgrounds/bg.",
+	"./img/site/backgrounds/bg1.",
+	"./img/site/backgrounds/bg2.",
+	"./img/site/backgrounds/bg3.",
+	"./img/site/backgrounds/bg4.",
+	"./img/site/backgrounds/bg5.",    
 ];
 
+function hasWebP() {
+	var rv = $.Deferred(), img = new Image();
+	img.onload = function() { rv.resolve(); };
+	img.onerror = function() { rv.reject(); };
+	img.src = "http://www.gstatic.com/webp/gallery/1.webp";
+	return rv.promise();
+}
+
+function setBackground(webPSupport) {
+	var wallpaper = bgs[Math.floor(Math.random() * bgs.length)];
+	$("body").css("background-image", "url("+wallpaper+webPSupport+")");
+}
+
 $(document).ready(function () {
+	hasWebP().then(function() {
+		setBackground("webp");
+	}, function() {
+		setBackground("jpg");
+	});
+
 	$(".main")
 		.css({
 			"opacity": 0,
@@ -20,6 +39,4 @@ $(document).ready(function () {
 			queue: false,
 			duration: 1000
 		});
-	var wallpaper = bgs[Math.floor(Math.random() * bgs.length)];
-	$("body").css("background-image", "url("+wallpaper+")");
 });

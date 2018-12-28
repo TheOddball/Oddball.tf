@@ -5,6 +5,7 @@ var uglify = require("gulp-uglify");
 var htmlmin = require("gulp-minify-html");
 var pug = require("gulp-pug");
 var stylus = require("gulp-stylus");
+var imagemin = require('gulp-imagemin');
 
 gulp.task("stylus", function () {
 	return gulp.src(["./css/*.styl"])
@@ -29,6 +30,7 @@ gulp.task("html", function () {
 
 gulp.task("images", function () {
 	return gulp.src("./img/site/**")
+		.pipe(imagemin())
 		.pipe(gulp.dest("./out/img/site"));
 });
 

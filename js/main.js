@@ -1,12 +1,4 @@
-var bgs = [
-	"./img/site/backgrounds/bg.",
-	"./img/site/backgrounds/bg1.",
-	"./img/site/backgrounds/bg2.",
-	"./img/site/backgrounds/bg3.",
-	"./img/site/backgrounds/bg4.",
-	"./img/site/backgrounds/bg5.",
-	"./img/site/backgrounds/bg6."
-];
+var numberOfBackgrounds = 8;
 
 function hasWebP() {
 	var rv = $.Deferred(), img = new Image();
@@ -17,8 +9,8 @@ function hasWebP() {
 }
 
 function setBackground(webPSupport) {
-	var wallpaper = bgs[Math.floor(Math.random() * bgs.length)];
-	$("body").css("background-image", "url("+wallpaper+webPSupport+")");
+	var wallpaper = Math.floor(Math.random() * numberOfBackgrounds+1);
+	$("body").css("background-image", "url(./img/site/backgrounds/bg"+wallpaper+"."+webPSupport+")");
 }
 
 $(document).ready(function () {

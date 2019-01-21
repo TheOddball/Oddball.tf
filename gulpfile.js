@@ -2,11 +2,10 @@ var gulp = require("gulp");
 var concat = require("gulp-concat");
 var csso = require("gulp-csso");
 var uglify = require("gulp-uglify");
-var htmlmin = require("gulp-minify-html");
 var pug = require("gulp-pug");
 var stylus = require("gulp-stylus");
-var imagemin = require('gulp-imagemin');
-var concatCss = require('gulp-concat-css');
+var imagemin = require("gulp-imagemin");
+var concatCss = require("gulp-concat-css");
 
 gulp.task("stylus", function () {
 	return gulp.src(["./css/*.styl"])

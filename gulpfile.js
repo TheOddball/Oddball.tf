@@ -26,7 +26,6 @@ gulp.task("js", function () {
 gulp.task("html", function () {
 	return gulp.src(["index.pug"])
 		.pipe(pug())
-		.pipe(htmlmin())
 		.pipe(gulp.dest("./out"));
 });
 

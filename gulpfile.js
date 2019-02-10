@@ -8,7 +8,7 @@ var imagemin = require("gulp-imagemin");
 var concatCss = require("gulp-concat-css");
 
 gulp.task("stylus", function () {
-	return gulp.src(["./css/*.styl"])
+	return gulp.src(["./src/css/*.styl"])
 		.pipe(stylus())
 		.pipe(concatCss("main.css"))
 		.pipe(csso())
@@ -16,20 +16,20 @@ gulp.task("stylus", function () {
 });
 
 gulp.task("js", function () {
-	return gulp.src(["./js/*.js"])
+	return gulp.src(["./src/js/*.js"])
 		.pipe(concat("main.js"))
 		.pipe(uglify())
 		.pipe(gulp.dest("./out"));
 });
 
 gulp.task("html", function () {
-	return gulp.src(["index.pug"])
+	return gulp.src(["./src/index.pug"])
 		.pipe(pug())
 		.pipe(gulp.dest("./out"));
 });
 
 gulp.task("images", function () {
-	return gulp.src("./img/site/**")
+	return gulp.src("./src/img/site/**")
 		.pipe(imagemin())
 		.pipe(gulp.dest("./out/img/site"));
 });

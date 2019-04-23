@@ -6,9 +6,20 @@ jobs:
       - image: circleci/node:8
     steps:
       - checkout
+      - restore_cache:
+        name: Restore node_modules cache
+        keys:
+          - v2-node-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          - v2-node-{{ .Branch }}-
+          - v2-node-
       - run:
           name: Install Dependencies
           command: npm i
+      - save_cache:
+        name: Save node_modules cache
+        key: v2-node-{{ .Branch }}-{{ checksum "yarn.lock" }}
+        paths:
+          - node_modules/
       - run: rm -rf out
       - run: mkdir out
       - run: npm run build

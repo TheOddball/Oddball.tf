@@ -7,16 +7,13 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-        name: Restore node_modules cache
         keys:
           - v2-node-{{ .Branch }}-{{ checksum "package-lock.json" }}
           - v2-node-{{ .Branch }}-
           - v2-node-
       - run:
-          name: Install Dependencies
           command: npm i
       - save_cache:
-        name: Save node_modules cache
         key: v2-node-{{ .Branch }}-{{ checksum "package-lock.json" }}
         paths:
           - node_modules/

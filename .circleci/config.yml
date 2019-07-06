@@ -36,7 +36,7 @@ jobs:
           at: ~/oddball
       - run: echo $GCLOUD_SERVICE_KEY | base64 --decode | gcloud auth activate-service-account --key-file=-
       - run: gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
-      - run: cd out && gsutil -m cp -r ./ gs://oddball.tf
+      - run: cd out && gsutil -m cp -r ./ gs://skaiyawn.com
 
 workflows:
   version: 2

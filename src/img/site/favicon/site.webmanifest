@@ -1,6 +1,6 @@
 {
-    "name": "Oddball.tf",
-    "short_name": "Oddball.tf",
+    "name": "Skaiyawn.com",
+    "short_name": "Skaiyawn.com",
     "icons": [
         {
             "src": "android-chrome-192x192.png",
@@ -8,12 +8,12 @@
             "type": "image/png"
         },
         {
-            "src": "android-chrome-256x256.png",
-            "sizes": "256x256",
+            "src": "android-chrome-512x512.png",
+            "sizes": "512x512",
             "type": "image/png"
         }
     ],
-    "theme_color": "#9f6bcf",
-    "background_color": "#9f6bcf",
+    "theme_color": "#7f0000",
+    "background_color": "#7f0000",
     "display": "standalone"
 }

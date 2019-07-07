@@ -1,37 +1,41 @@
-var gulp = require("gulp");
-var concat = require("gulp-concat");
-var csso = require("gulp-csso");
-var uglify = require("gulp-uglify");
-var pug = require("gulp-pug");
-var stylus = require("gulp-stylus");
-var imagemin = require("gulp-imagemin");
-var concatCss = require("gulp-concat-css");
+const { src, dest, parallel } = require('gulp');
+const concat = require("gulp-concat");
+const csso = require("gulp-csso");
+const uglify = require("gulp-uglify");
+const pug = require("gulp-pug");
+const stylus = require("gulp-stylus");
+const imagemin = require("gulp-imagemin");
+const concatCss = require("gulp-concat-css");
 
-gulp.task("stylus", function () {
-	return gulp.src(["./src/css/*.styl"])
-		.pipe(stylus())
-		.pipe(concatCss("main.css"))
-		.pipe(csso())
-		.pipe(gulp.dest("./out"));
-});
+function js() {
+    return src(["./src/js/*.js"])
+        .pipe(concat("main.js"))
+        .pipe(uglify())
+        .pipe(dest("./out"));
+};
 
-gulp.task("js", function () {
-	return gulp.src(["./src/js/*.js"])
-		.pipe(concat("main.js"))
-		.pipe(uglify())
-		.pipe(gulp.dest("./out"));
-});
+function html() {
+    return src(["./src/index.pug"])
+        .pipe(pug())
+        .pipe(dest("./out"));
+};
 
-gulp.task("html", function () {
-	return gulp.src(["./src/index.pug"])
-		.pipe(pug())
-		.pipe(gulp.dest("./out"));
-});
+function img() {
+    return src("./src/img/site/**")
+        .pipe(imagemin())
+        .pipe(dest("./out/img/site"));
+};
 
-gulp.task("images", function () {
-	return gulp.src("./src/img/site/**")
-		.pipe(imagemin())
-		.pipe(gulp.dest("./out/img/site"));
-});
+function css() {
+    return src(["./src/css/*.styl"])
+        .pipe(stylus())
+        .pipe(concatCss("main.css"))
+        .pipe(csso())
+        .pipe(dest("./out"));
+}
 
-gulp.task("default", gulp.parallel("images", "html", "stylus", "js"));
+exports.js = js;
+exports.html = html;
+exports.img = img;
+exports.css = css;
+exports.default = parallel(js, html, img, css);

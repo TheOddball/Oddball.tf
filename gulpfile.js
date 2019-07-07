@@ -8,23 +8,23 @@ const imagemin = require("gulp-imagemin");
 const concatCss = require("gulp-concat-css");
 
 function js() {
-    return src(["./src/js/*.js"])
+    return src(["./src/js/*.js"], { sourcemaps: true })
         .pipe(concat("main.js"))
         .pipe(uglify())
-        .pipe(dest("./out"));
-};
+        .pipe(dest("./out", { sourcemaps: true }));
+}
 
 function html() {
     return src(["./src/index.pug"])
         .pipe(pug())
         .pipe(dest("./out"));
-};
+}
 
 function img() {
     return src("./src/img/site/**")
         .pipe(imagemin())
         .pipe(dest("./out/img/site"));
-};
+}
 
 function css() {
     return src(["./src/css/*.styl"])

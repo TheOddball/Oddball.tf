@@ -1,27 +1,33 @@
-var numberOfBackgrounds = 8;
+var isGameOpen;
 
-function hasWebP() {
-    var rv = $.Deferred(),
-        img = new Image();
-    img.onload = function() { rv.resolve(); };
-    img.onerror = function() { rv.reject(); };
-    img.src = "https://www.gstatic.com/webp/gallery/1.webp";
-    return rv.promise();
+function showGame() {
+    var milagame = $('#milaGame');
+    milagame.show();
+
+    setTimeout(function() {
+        milagame.css('opacity', '1');
+    }, 100);
+
+    isGameOpen = true;
+
+    $(document).mouseup(function(e) {
+        if (!milagame.is(e.target) && milagame.has(e.target).length === 0 && isGameOpen == true) {
+            hideGame();
+        }
+    });
 }
 
-function setBackground(webPSupport) {
-    var wallpaper = Math.floor(Math.random() * numberOfBackgrounds + 1);
-    var url = "./img/site/backgrounds/" + webPSupport + "/bg" + wallpaper + "." + webPSupport;
-    $("body").css("background-image", "url(" + url + ")");
+function hideGame() {
+    var milagame = $('#milaGame');
+    milagame.css('opacity', '0');
+
+    setTimeout(function() {
+        milagame.hide();
+    }, 100);
+    isGameOpen = false;
 }
 
 $(document).ready(function() {
-    //hasWebP().then(function() {
-    //setBackground("webp");
-    //}, function() {
-    //setBackground("jpg");
-    //});
-
     $(".main")
         .css({
             "opacity": 0,

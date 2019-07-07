@@ -26,6 +26,12 @@ html(lang='en', style='height:100%;')
         script(src='./main.js')
         link(href='https://fonts.googleapis.com/css?family=Roboto:100,300&display=swap', rel='stylesheet')
     body
+        #milaGame
+            .game
+                object(type='application/x-shockwave-flash', data='./swf/mila.swf')
+                    param(name='movie', value='Transforming Mila.swf')
+                    param(name='quality', value='high')
+
         .main
             .topping
                 .container-top
@@ -41,7 +47,7 @@ html(lang='en', style='height:100%;')
                                     a(href='https://discord.gg/5gRXs9C')
                                         img(src='./img/site/discord.png')
                                 li
-                                    a(href='https://milagame.skiyawn.com')
+                                    div(onclick='showGame()')
                                         img(src='./img/site/mila.png')
                                 li
                                     a(href='https://www.patreon.com/skaiyawn')

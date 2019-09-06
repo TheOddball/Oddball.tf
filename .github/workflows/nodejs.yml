@@ -27,9 +27,10 @@ jobs:
       run: |
         echo $GCLOUD_SERVICE_KEY | base64 --decode | gcloud auth activate-service-account --key-file=-
         gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
-    env:
-      GCLOUD_SERVICE_KEY: ${{ secrets.GCLOUD_SERVICE_KEY }}
-      GOOGLE_PROJECT_ID: ${{ secrets.GOOGLE_PROJECT_ID }}
+      env:
+        GCLOUD_SERVICE_KEY: ${{ secrets.GCLOUD_SERVICE_KEY }}
+        GOOGLE_PROJECT_ID: ${{ secrets.GOOGLE_PROJECT_ID }}
+        
     - name: Upload compiled site to GCS
       run: |
         cd out

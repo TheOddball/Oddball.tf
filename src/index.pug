@@ -12,7 +12,7 @@ html(lang='en', style='height:100%;')
         meta(property='og:image:width', content='367')
         meta(property='og:url', content='https://oddball.tf/')
         meta(property='og:description', content='The Oddest Ball Around.')
-        link(rel='stylesheet', href='./main.css')
+
         link(rel="apple-touch-icon", sizes="180x180", href="./img/site/favicon/apple-touch-icon.png")
         link(rel="icon", type="image/png", sizes="32x32", href="./img/site/favicon/favicon-32x32.png")
         link(rel="icon", type="image/png", sizes="16x16", href="./img/site/favicon/favicon-16x16.png")
@@ -22,7 +22,9 @@ html(lang='en', style='height:100%;')
         meta(name="msapplication-TileColor", content="#9f6bcf")
         meta(name="msapplication-config", content="./img/site/favicon/browserconfig.xml")
         meta(name="theme-color", content="#9f6bcf")
-        script(src='./main.js')
+
+        link(href='./css/main.styl', rel='stylesheet', type='text/css')
+        script(src='js/main.js')
     body
         .main
             .topping

@@ -1,17 +1,13 @@
 {
-  "name": "oddball.tf",
-  "version": "1.0.0",
-  "scripts": {
-    "build": "gulp"
-  },
-  "dependencies": {
-    "gulp": "^4.0.2",
-    "gulp-concat": "^2.5.2",
-    "gulp-concat-css": "^3.1.0",
-    "gulp-imagemin": "^6.2.0",
-    "gulp-csso": "^4.0.1",
-    "gulp-pug": "^4.0.1",
-    "gulp-stylus": "^2.7.0",
-    "gulp-uglify": "^3.0.2"
-  }
+    "name": "oddball.tf",
+    "version": "1.1.0",
+    "scripts": {
+        "start": "parcel ./src/index.pug --public-url ./",
+        "build": "parcel build ./src/index.pug --public-url ./"
+    },
+    "dependencies": {
+        "jquery": "^3.4.1",
+        "parcel-bundler": "^1.12.4",
+        "parcel-plugin-static-files-copy": "^2.2.1"
+    }
 }

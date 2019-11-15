@@ -4,3 +4,5 @@ email
 !index.html
 .htaccess
 node_modules
+dist
+.cache

@@ -1,4 +1,4 @@
-import $ from 'jQuery'
+import $ from 'jquery'
 window.$ = window.jQuery = $
 
 var numberOfBackgrounds = 8;

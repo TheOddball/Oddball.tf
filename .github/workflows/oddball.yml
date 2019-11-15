@@ -22,8 +22,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Npm Install
       run: npm install
-    - name: Run Gulp
-      run: gulp
+    - name: Build
+      run: npm run build
       
     - uses: docker://google/cloud-sdk
     - name: Set up Google Cloud
@@ -36,5 +36,5 @@ jobs:
         
     - name: Upload compiled site to GCS
       run: |
-        cd out
+        cd dist
         gsutil -m cp -r ./ gs://oddball.tf

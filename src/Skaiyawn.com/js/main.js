@@ -1,3 +1,6 @@
+import $ from 'jquery'
+window.$ = window.jQuery = $
+
 var isGameOpen;
 
 function showGame() {

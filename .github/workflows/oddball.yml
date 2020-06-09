@@ -40,16 +40,6 @@ jobs:
         cd dist
         gsutil -m cp -r ./ gs://oddball.tf
         cd ..
-
-    - name: Build Elise.tf
-      run: |
-        rm -rf dist
-        npm run build-elise        
-    - name: Upload Elise.tf
-      run: |
-        cd dist
-        gsutil -m cp -r ./ gs://elise.tf
-        cd ..
         
     - name: Build Skaiyawn.com
       run: |
@@ -70,3 +60,21 @@ jobs:
         cd dist
         gsutil -m cp -r ./ gs://supersatanson.com
         cd ..
+        
+    - name: Set up Google Cloud for Elise.tf
+      run: |
+        echo $ELISE_SERVICE_KEY | gcloud auth activate-service-account --key-file=-
+        gcloud --quiet config set project ${ELISE_PROJECT_ID}
+      env:
+        ELISE_SERVICE_KEY: ${{ secrets.ELISE_SERVICE_KEY }}
+        ELISE_PROJECT_ID: ${{ secrets.ELISE_PROJECT_ID }}
+    
+    - name: Build Elise.tf
+      run: |
+        rm -rf dist
+        npm run build-elise        
+    - name: Upload Elise.tf
+      run: |
+        cd dist
+        gsutil -m cp -r ./ gs://elise.tf
+        cd .. 

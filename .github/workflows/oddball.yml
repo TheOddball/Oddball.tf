@@ -22,9 +22,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Npm Install
       run: npm install
-    - name: Build
-      run: npm run build
-      
     - uses: docker://google/cloud-sdk
     - name: Set up Google Cloud
       run: |
@@ -33,8 +30,35 @@ jobs:
       env:
         GCLOUD_SERVICE_KEY: ${{ secrets.GCLOUD_SERVICE_KEY }}
         GOOGLE_PROJECT_ID: ${{ secrets.GOOGLE_PROJECT_ID }}
-        
-    - name: Upload compiled site to GCS
+    
+    - name: Build Oddball.tf
+      run: npm run build-oddball        
+    - name: Upload Oddball.tf
       run: |
         cd dist
-        gsutil -m cp -r ./ gs://oddball.tf
+        gsutil -m cp -r ./ gs://Oddball.tf
+        cd ..
+
+    - name: Build Elise.tf
+      run: npm run build-elise        
+    - name: Upload Elise.tf
+      run: |
+        cd dist
+        gsutil -m cp -r ./ gs://Elise.tf
+        cd ..
+        
+    - name: Build Skaiyawn.com
+      run: npm run build-skiyawn        
+    - name: Upload Skaiyawn.com
+      run: |
+        cd dist
+        gsutil -m cp -r ./ gs://Skaiyawn.com
+        cd ..
+        
+    - name: Build SuperSatanSon.com
+      run: npm run build-SSS        
+    - name: Upload SuperSatanSon.com
+      run: |
+        cd dist
+        gsutil -m cp -r ./ gs://SuperSatanSon.com
+        cd ..

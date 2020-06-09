@@ -2,16 +2,18 @@
     "name": "oddball.tf",
     "version": "1.1.0",
     "scripts": {
-        "start": "parcel ./src/index.pug --public-url ./",
-        "build": "parcel build ./src/index.pug --public-url ./"
+        "build-oddball": "parcel build ./src/Oddball.tf/index.pug --public-url ./",
+        "build-elise": "parcel build ./src/Elise.tf/index.pug --public-url ./",
+        "build-skaiyawn": "parcel build ./src/Skaiyawn.com/index.pug --public-url ./",
+        "build-SSS": "parcel build ./src/SuperSatanSon.com/index.pug --public-url ./"
     },
     "dependencies": {
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.1",
         "parcel-bundler": "^1.12.4",
-        "parcel-plugin-static-files-copy": "^2.2.2"
+        "parcel-plugin-static-files-copy": "^2.4.1"
     },
     "devDependencies": {
-        "pug": "^2.0.4",
+        "pug": "^3.0.0",
         "stylus": "^0.54.7"
     }
 }

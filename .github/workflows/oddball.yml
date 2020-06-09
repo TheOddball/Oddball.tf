@@ -44,7 +44,7 @@ jobs:
     - name: Build Skaiyawn.com
       run: |
         rm -rf dist
-        npm run build-skiyawn        
+        npm run build-skaiyawn        
     - name: Upload Skaiyawn.com
       run: |
         cd dist

@@ -38,7 +38,7 @@ jobs:
     - name: Upload Oddball.tf
       run: |
         cd dist
-        gsutil -m cp -r ./ gs://Oddball.tf
+        gsutil -m cp -r ./ gs://oddball.tf
         cd ..
 
     - name: Build Elise.tf
@@ -48,7 +48,7 @@ jobs:
     - name: Upload Elise.tf
       run: |
         cd dist
-        gsutil -m cp -r ./ gs://Elise.tf
+        gsutil -m cp -r ./ gs://elise.tf
         cd ..
         
     - name: Build Skaiyawn.com
@@ -58,7 +58,7 @@ jobs:
     - name: Upload Skaiyawn.com
       run: |
         cd dist
-        gsutil -m cp -r ./ gs://Skaiyawn.com
+        gsutil -m cp -r ./ gs://skaiyawn.com
         cd ..
         
     - name: Build SuperSatanSon.com
@@ -68,5 +68,5 @@ jobs:
     - name: Upload SuperSatanSon.com
       run: |
         cd dist
-        gsutil -m cp -r ./ gs://SuperSatanSon.com
+        gsutil -m cp -r ./ gs://supersatanson.com
         cd ..

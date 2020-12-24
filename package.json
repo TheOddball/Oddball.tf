@@ -4,7 +4,6 @@
     "scripts": {
         "build-oddball": "parcel build ./src/Oddball.tf/index.pug --public-url ./",
         "build-elise": "parcel build ./src/Elise.tf/index.pug --public-url ./",
-        "build-skaiyawn": "parcel build ./src/Skaiyawn.com/index.pug --public-url ./",
         "build-SSS": "parcel build ./src/SuperSatanSon.com/index.pug --public-url ./"
     },
     "dependencies": {

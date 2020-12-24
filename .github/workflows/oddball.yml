@@ -41,16 +41,6 @@ jobs:
         gsutil -m cp -r ./ gs://oddball.tf
         cd ..
         
-    - name: Build Skaiyawn.com
-      run: |
-        rm -rf dist
-        npm run build-skaiyawn        
-    - name: Upload Skaiyawn.com
-      run: |
-        cd dist
-        gsutil -m cp -r ./ gs://skaiyawn.com
-        cd ..
-        
     - name: Build SuperSatanSon.com
       run: |
         rm -rf dist

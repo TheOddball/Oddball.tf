@@ -1,7 +1,7 @@
 import $ from 'jquery'
 window.$ = window.jQuery = $
 
-var numberOfBackgrounds = 8;
+var numberOfBackgrounds = 5;
 
 function hasWebP() {
 	var rv = $.Deferred(), img = new Image();
@@ -17,7 +17,7 @@ function setBackground(webPSupport) {
 	$("body").css("background-image", "url("+url+")");
 }
 
-$(document).ready(function () {
+jQuery(function () {
 	hasWebP().then(function() {
 		setBackground("webp");
 	}, function() {

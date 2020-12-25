@@ -13,7 +13,7 @@ function hasWebP() {
 
 function setBackground(webPSupport) {
 	var wallpaper = Math.floor(Math.random() * numberOfBackgrounds+1);
-	var url = "./img/site/backgrounds/" + webPSupport + "/bg" + wallpaper + "." + webPSupport;
+	var url = "./backgrounds/" + webPSupport + "/bg" + wallpaper + "." + webPSupport;
 	$("body").css("background-image", "url("+url+")");
 }
 

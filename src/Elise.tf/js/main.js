@@ -1,7 +1,7 @@
 import $ from 'jquery'
 window.$ = window.jQuery = $
 
-var numberOfBackgrounds = 5;
+var numberOfBackgrounds = 15;
 
 function hasWebP() {
 	var rv = $.Deferred(), img = new Image();
@@ -13,7 +13,7 @@ function hasWebP() {
 
 function setBackground(webPSupport) {
 	var wallpaper = Math.floor(Math.random() * numberOfBackgrounds+1);
-	var url = "./backgrounds/" + webPSupport + "/bg" + wallpaper + "." + webPSupport;
+	var url = "./img/site/backgrounds/" + webPSupport + "/bg" + wallpaper + "." + webPSupport;
 	$("body").css("background-image", "url("+url+")");
 }
 

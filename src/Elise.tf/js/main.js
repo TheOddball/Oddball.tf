@@ -1,7 +1,7 @@
 import $ from 'jquery'
 window.$ = window.jQuery = $
 
-var numberOfBackgrounds = 15;
+var numberOfBackgrounds = 19;
 
 function hasWebP() {
 	var rv = $.Deferred(), img = new Image();

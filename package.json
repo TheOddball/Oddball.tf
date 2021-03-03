@@ -12,7 +12,7 @@
         "parcel-plugin-static-files-copy": "^2.5.1"
     },
     "devDependencies": {
-        "pug": "^3.0.0",
+        "pug": "^3.0.1",
         "stylus": "^0.54.8"
     }
 }

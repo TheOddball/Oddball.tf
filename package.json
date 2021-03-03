@@ -7,7 +7,7 @@
         "build-SSS": "parcel build ./src/SuperSatanSon.com/index.pug --public-url ./"
     },
     "dependencies": {
-        "jquery": "^3.5.1",
+        "jquery": "^3.6.0",
         "parcel-bundler": "^1.12.4",
         "parcel-plugin-static-files-copy": "^2.5.1"
     },

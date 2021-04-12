@@ -10,7 +10,7 @@
         "@parcel/packager-raw-url": "^2.0.0-nightly.2244",
         "@parcel/transformer-pug": "^2.0.0-nightly.629",
         "@parcel/transformer-stylus": "^2.0.0-nightly.622",
-        "@parcel/transformer-webmanifest": "^2.0.0-nightly.2244",
+        "@parcel/transformer-webmanifest": "^2.0.0-nightly.2261",
         "jquery": "^3.6.0",
         "parcel": "^2.0.0-nightly.620",
         "parcel-reporter-static-files-copy": "^1.2.1",

@@ -7,7 +7,7 @@
         "build-SSS": "parcel build ./src/SuperSatanSon.com/index.pug --public-url ./"
     },
     "devDependencies": {
-        "@parcel/packager-raw-url": "^2.0.0-nightly.2244",
+        "@parcel/packager-raw-url": "^2.0.0-nightly.2261",
         "@parcel/transformer-pug": "^2.0.0-nightly.629",
         "@parcel/transformer-stylus": "^2.0.0-nightly.622",
         "@parcel/transformer-webmanifest": "^2.0.0-nightly.2244",

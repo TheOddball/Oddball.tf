@@ -12,7 +12,7 @@
         "@parcel/transformer-stylus": "^2.0.0-nightly.622",
         "@parcel/transformer-webmanifest": "^2.0.0-nightly.2244",
         "jquery": "^3.6.0",
-        "parcel": "^2.0.0-nightly.620",
+        "parcel": "^2.0.0-nightly.756",
         "parcel-reporter-static-files-copy": "^1.2.1",
         "pug": "^3.0.0",
         "stylus": "^0.54.8"

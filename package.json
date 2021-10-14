@@ -19,6 +19,6 @@
         "stylus": "^0.55.0"
     },
     "devDependencies": {
-        "@parcel/transformer-image": "^2.0.0-rc.0"
+        "@parcel/transformer-image": "^2.0.0"
     }
 }

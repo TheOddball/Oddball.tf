@@ -9,7 +9,7 @@
     },
     "dependencies": {
         "@parcel/packager-raw-url": "^2.0.1",
-        "@parcel/transformer-pug": "^2.0.1",
+        "@parcel/transformer-pug": "^2.1.0",
         "@parcel/transformer-stylus": "^2.0.1",
         "@parcel/transformer-webmanifest": "^2.0.1",
         "jquery": "^3.6.0",

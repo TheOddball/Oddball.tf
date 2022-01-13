@@ -19,6 +19,6 @@
         "stylus": "^0.55.0",
         "@parcel/packager-xml": "^2.0.1",
         "@parcel/transformer-image": "^2.0.1",
-        "@parcel/transformer-xml": "^2.0.1"
+        "@parcel/transformer-xml": "^2.2.0"
     }
 }

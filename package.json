@@ -8,7 +8,7 @@
         "build-all": "npm run build-oddball && npm run build-elise && npm run build-SSS"
     },
     "dependencies": {
-        "@parcel/packager-raw-url": "^2.0.1",
+        "@parcel/packager-raw-url": "^2.2.1",
         "@parcel/transformer-pug": "^2.0.1",
         "@parcel/transformer-stylus": "^2.0.1",
         "@parcel/transformer-webmanifest": "^2.0.1",

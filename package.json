@@ -7,7 +7,7 @@
         "build-all": "npm run build-oddball && npm run build-SSS"
     },
     "dependencies": {
-        "@parcel/packager-raw-url": "^2.3.1",
+        "@parcel/packager-raw-url": "^2.4.1",
         "@parcel/packager-xml": "^2.3.1",
         "@parcel/transformer-image": "^2.3.1",
         "@parcel/transformer-pug": "^2.3.1",

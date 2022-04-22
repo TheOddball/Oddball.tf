@@ -11,7 +11,7 @@
         "@parcel/packager-xml": "^2.4.1",
         "@parcel/transformer-image": "^2.4.1",
         "@parcel/transformer-pug": "^2.4.1",
-        "@parcel/transformer-stylus": "^2.4.1",
+        "@parcel/transformer-stylus": "^2.5.0",
         "@parcel/transformer-webmanifest": "^2.4.1",
         "@parcel/transformer-xml": "^2.4.1",
         "jquery": "^3.6.0",

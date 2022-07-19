@@ -4,7 +4,8 @@
     "scripts": {
         "build-oddball": "parcel build ./src/Oddball.tf/index.pug --public-url ./",
         "build-SSS": "parcel build ./src/SuperSatanSon.com/index.pug --public-url ./",
-        "build-all": "npm run build-oddball && npm run build-SSS"
+        "build-elise": "parcel build ./src/Elise.tf/index.pug --public-url ./",
+        "build-all": "npm run build-oddball && npm run build-SSS && npm run build-elise"
     },
     "dependencies": {
         "@parcel/packager-raw-url": "^2.6.0",

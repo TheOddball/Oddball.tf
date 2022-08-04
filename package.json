@@ -16,7 +16,6 @@
         "@parcel/transformer-webmanifest": "^2.7.0",
         "@parcel/transformer-xml": "^2.7.0",
         "@parcel/validator-eslint": "^2.7.0",
-        "eslint": "7.32.0",
         "jquery": "^3.6.0",
         "parcel": "^2.7.0",
         "parcel-reporter-static-files-copy": "^1.4.0",

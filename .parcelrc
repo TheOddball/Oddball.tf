@@ -1,4 +1,14 @@
 {
-  "extends": ["@parcel/config-default"],
-  "reporters":  ["...", "parcel-reporter-static-files-copy"]
+  "extends": [
+    "@parcel/config-default"
+  ],
+  "reporters": [
+    "...",
+    "parcel-reporter-static-files-copy"
+  ],
+  "validators": {
+    "*.{js,mjs,jsm,jsx,es6,cjs,ts,tsx}": [
+      "@parcel/validator-eslint"
+    ]
+  }
 }

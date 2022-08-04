@@ -12,7 +12,7 @@
         "@parcel/packager-xml": "^2.6.2",
         "@parcel/transformer-image": "^2.6.2",
         "@parcel/transformer-pug": "^2.6.2",
-        "@parcel/transformer-stylus": "^2.6.2",
+        "@parcel/transformer-stylus": "^2.7.0",
         "@parcel/transformer-webmanifest": "^2.6.2",
         "@parcel/transformer-xml": "^2.6.2",
         "jquery": "^3.6.0",

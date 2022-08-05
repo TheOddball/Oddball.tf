@@ -1,7 +1,7 @@
 import $ from 'jquery'
 window.$ = window.jQuery = $
 
-$(document).ready(function () {
+jQuery(function () {
 	$(".main")
 		.css({
 			"opacity": 0,

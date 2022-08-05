@@ -6,8 +6,8 @@ var numberOfBackgrounds = 22;
 function hasWebP() {
     var rv = $.Deferred(),
         img = new Image();
-    img.onload = function() { rv.resolve(); };
-    img.onerror = function() { rv.reject(); };
+    img.onload = function () { rv.resolve(); };
+    img.onerror = function () { rv.reject(); };
     img.src = "https://www.gstatic.com/webp/gallery/1.webp";
     return rv.promise();
 }
@@ -18,10 +18,10 @@ function setBackground(webPSupport) {
     $("body").css("background-image", "url(" + url + ")");
 }
 
-$(document).ready(function() {
-    hasWebP().then(function() {
+jQuery(function () {
+    hasWebP().then(function () {
         setBackground("webp");
-    }, function() {
+    }, function () {
         setBackground("jpg");
     });
 

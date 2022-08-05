@@ -1,7 +1,10 @@
 {
     "name": "oddball.tf",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "scripts": {
+        "test": "parcel ./src/Oddball.tf/index.pug",
+        "test-elise": "parcel ./src/Elise.tf/index.pug",
+        "test-SSS": "parcel ./src/SuperSatanSon.com/index.pug",
         "build-oddball": "parcel build ./src/Oddball.tf/index.pug --public-url ./",
         "build-SSS": "parcel build ./src/SuperSatanSon.com/index.pug --public-url ./",
         "build-elise": "parcel build ./src/Elise.tf/index.pug --public-url ./",

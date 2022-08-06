@@ -5,8 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "command": "npm run build-all",
-            "name": "Test all",
+            "command": "npm run build-all-win",
+            "name": "Test all on Windows",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "command": "npm run test",
+            "name": "Run dev instance",
             "request": "launch",
             "type": "node-terminal"
         }

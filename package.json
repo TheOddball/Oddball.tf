@@ -8,7 +8,8 @@
         "build-oddball": "parcel build ./src/Oddball.tf/index.pug --public-url ./",
         "build-SSS": "parcel build ./src/SuperSatanSon.com/index.pug --public-url ./",
         "build-elise": "parcel build ./src/Elise.tf/index.pug --public-url ./",
-        "build-all": "npm run build-oddball && npm run build-SSS && npm run build-elise"
+        "build-all-win": "del /Q dist && npm run build-oddball && del /Q dist && npm run build-SSS && del /Q dist && npm run build-elise && del /Q dist",
+        "build-all-linux": "rm -rf dist && npm run build-oddball && rm -rf dist && npm run build-SSS && rm -rf dist && npm run build-elise && rm -rf dist"
     },
     "dependencies": {
         "@parcel/packager-raw-url": "^2.7.0",

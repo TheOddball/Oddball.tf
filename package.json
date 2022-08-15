@@ -26,6 +26,6 @@
         "parcel": "^2.7.0",
         "parcel-reporter-static-files-copy": "^1.4.0",
         "pug": "^3.0.0",
-        "stylus": "^0.58.1"
+        "stylus": "^0.59.0"
     }
 }

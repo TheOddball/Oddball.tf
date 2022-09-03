@@ -13,6 +13,13 @@ body
   font-size 100%
   font-family 'Product Sans', Helvetica, Arial, sans-serif
 
+@keyframes gradient
+  0%
+    background-position 0%
+
+  100%
+    background-position 100%
+
 .main
   position relative
   top 45%
@@ -23,6 +30,7 @@ body
   width 175px
   height 175px
   border-radius 100px
+  transition all 0.4s ease
 
 .topping
   & > .container-top
@@ -37,7 +45,13 @@ body
   & > h1
     font-weight 500
     font-size 650%
-    margin 0
+    // background linear-gradient(45deg, #36bbf7 0%, #702df9 100%)
+    animation gradient 3s ease infinite
+    background-size 200% 100%
+    animation-direction alternate
+    width calc(100% - 400px)
+    border-radius 100px
+    margin 20px auto
 
 h3
   font-size 250%
@@ -45,18 +59,47 @@ h3
 .list-group
   text-align center
 
+.ulshadow
+  background linear-gradient(45deg, #36bbf7 0%, #702df9 100%)
+  filter blur(12px)
+  animation gradient 3s ease infinite
+  background-size 200% 100%
+  animation-direction alternate
+  position: relative
+  z-index 1
+  width 800px
+  height 175px
+  margin: 0 auto
+  border-radius: 100px
+
 ul
-  padding 0
+  padding 10px
+  background linear-gradient(45deg, #36bbf7 0%, #702df9 100%)
+  animation gradient 3s ease infinite
+  background-size 200% 100%
+  animation-direction alternate
+  border-radius 100px
+  margin 0 auto
+  width max-content
+  z-index 5
+  position: relative
+  top -160px
 
   li
     display inline-block
     padding-left 25px
     list-style-type none
+    top 2px
+    position relative
+
+    &:first-of-type
+      padding-left 0
 
     img
       width 125px
       opacity 0.8
       transition all 0.4s ease-in-out
+      position relative
 
       &:hover
         transform scale(1.025)

@@ -2,7 +2,7 @@
     "name": "oddball.tf",
     "version": "1.2.0",
     "scripts": {
-        "test": "parcel ./src/Oddball.tf/index.pug",
+        "test": "del /Q dist && parcel ./src/Oddball.tf/index.pug",
         "test-elise": "parcel ./src/Elise.tf/index.pug",
         "test-SSS": "parcel ./src/SuperSatanSon.com/index.pug",
         "test-bdino": "parcel ./src/bdino.info/index.pug",

@@ -37,4 +37,16 @@ jQuery(function () {
             queue: false,
             duration: 1000
         });
+    $('#avatar').on("click", function () {
+        $(this).css({
+            "transition": "all .5s ease",
+            "rotate": '360deg'
+        })
+        setTimeout(function () {
+            $('#avatar').css({
+                "transition": "none",
+                "rotate": '0deg'
+            })
+        }, 500)
+    })
 });

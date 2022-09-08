@@ -20,9 +20,8 @@ html(lang='en' style='height:100%;')
         meta(name='msapplication-config' content='./img/site/favicon/browserconfig.xml')
         meta(name='theme-color' content='#804cee')
 
-
-    link(href='./css/main.styl' rel='stylesheet' type='text/css')
-    script(src='js/main.js' type='module')
+        link(href='./css/main.styl' rel='stylesheet' type='text/css')
+        script(src='js/main.js' type='module')
     body
         .main
             .topping
@@ -31,6 +30,7 @@ html(lang='en' style='height:100%;')
                         img#avatar(src='./img/site/bdino.jpg' alt='Avatar' height='200' width='200')
                         h1 BDino
                         .list-group
+                            .ulshadow
                             ul
                                 li
                                     a(href='https://www.youtube.com/channel/UC3GgRkZeVulq5WomMYpvJ-g')
@@ -50,6 +50,9 @@ html(lang='en' style='height:100%;')
                                 li
                                     a(href='https://www.youtube.com/channel/UC5eZiP2Oy0bSACG2nJXLyRg')
                                         img(src='./img/site/youtube.svg')
+                                li
+                                    a(href='https://linktr.ee/bitstarzbdino')
+                                        img(src='./img/site/bitstarz.svg')
         footer
             a(href="https://oddball.tf")
                 img(src="./img/site/favicon/footer.png")

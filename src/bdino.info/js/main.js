@@ -32,7 +32,7 @@ jQuery(function () {
         })
         .animate({
             opacity: 1,
-            top: 0
+            top: -50
         }, {
             queue: false,
             duration: 1000

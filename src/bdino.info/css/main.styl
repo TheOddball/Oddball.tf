@@ -34,7 +34,7 @@ footer
 
 .main
   position relative
-  top 45%
+  top 40%
   text-align center
   transform translateY(25%)
 
@@ -60,7 +60,7 @@ footer
     animation gradient 3s ease infinite
     background-size 200% 100%
     animation-direction alternate
-    width calc(100% - 400px)
+    width max-content
     border-radius 100px
     margin 20px auto
 
@@ -71,6 +71,8 @@ h3
   text-align center
 
 .ulshadow
+  margin: 0 auto
+  border-radius: 100px
   background linear-gradient(45deg, #B4B4B4 0%, #7C4CDE 100%)
   filter blur(12px)
   animation gradient 3s ease infinite
@@ -78,10 +80,15 @@ h3
   animation-direction alternate
   position: relative
   z-index 1
-  width 100%
   height 175px
-  margin: 0 auto
-  border-radius: 100px
+
+  &:first-of-type
+    width 610px
+  
+  &:last-of-type
+    width 490px
+    top -160px
+    
 
 ul
   padding 10px
@@ -95,6 +102,9 @@ ul
   z-index 5
   position: relative
   top -160px
+
+  &:last-of-type
+    top -320px
 
   li
     display inline-block

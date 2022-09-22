@@ -2,18 +2,17 @@
     "name": "oddball.tf",
     "version": "1.2.0",
     "scripts": {
-        "test": "del /Q dist && parcel ./src/Oddball.tf/index.pug",
-        "test-adhd": "del /Q dist && parcel ./src/adhdsenpai.com/index.pug",
+        "test": "parcel ./src/Oddball.tf/index.pug",
+        "test-adhd": "parcel ./src/adhdsenpai.com/index.pug",
         "test-elise": "parcel ./src/Elise.tf/index.pug",
         "test-SSS": "parcel ./src/SuperSatanSon.com/index.pug",
         "test-bdino": "parcel ./src/bdino.info/index.pug",
+
         "build-oddball": "parcel build ./src/Oddball.tf/index.pug --public-url ./",
         "build-SSS": "parcel build ./src/SuperSatanSon.com/index.pug --public-url ./",
         "build-adhd": "parcel build ./src/adhdsenpai.com/index.pug --public-url ./",
         "build-bdino": "parcel build ./src/bdino.info/index.pug",
-        "build-elise": "parcel build ./src/Elise.tf/index.pug --public-url ./",
-        "build-all-win": "del /Q dist && npm run build-oddball && del /Q dist && npm run build-SSS && del /Q dist && npm run build-elise && del /Q dist",
-        "build-all-linux": "rm -rf dist && npm run build-oddball && rm -rf dist && npm run build-SSS && rm -rf dist && npm run build-elise && rm -rf dist"
+        "build-elise": "parcel build ./src/Elise.tf/index.pug --public-url ./"
     },
     "dependencies": {
         "@parcel/packager-raw-url": "^2.7.0",

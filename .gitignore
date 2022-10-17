@@ -1,9 +1,3 @@
-out
-email
-*.html
-!index.html
-.htaccess
 node_modules
 dist
-.cache
 .parcel-cache

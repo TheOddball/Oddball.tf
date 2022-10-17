@@ -1,41 +1,80 @@
 import $ from 'jquery'
 window.$ = window.jQuery = $
+import anime from 'animejs'
 
-var numberOfBackgrounds = 22;
+const wrapper = document.getElementById("tiles");
 
-function hasWebP() {
-    var rv = $.Deferred(),
-        img = new Image();
-    img.onload = function () { rv.resolve(); };
-    img.onerror = function () { rv.reject(); };
-    img.src = "https://www.gstatic.com/webp/gallery/1.webp";
-    return rv.promise();
+let columns = 0,
+    rows = 0,
+    toggled = false;
+
+const toggle = () => {
+    toggled = !toggled;
+
+    document.body.classList.toggle("toggled");
 }
 
-function setBackground(webPSupport) {
-    var wallpaper = Math.floor(Math.random() * numberOfBackgrounds + 1);
-    var url = "./backgrounds/" + webPSupport + "/bg" + wallpaper + "." + webPSupport;
-    $("body").css("background-image", "url(" + url + ")");
+const handleOnClick = index => {
+    toggle();
+
+    anime({
+        targets: ".tile",
+        opacity: toggled ? 0 : 1,
+        delay: anime.stagger(50, {
+            grid: [columns, rows],
+            from: index
+        })
+    });
 }
+
+const createTile = index => {
+    const tile = document.createElement("div");
+
+    tile.classList.add("tile");
+
+    tile.style.opacity = toggled ? 0 : 1;
+
+    tile.onclick = () => handleOnClick(index);
+
+    return tile;
+}
+
+const createTiles = quantity => {
+    Array.from(Array(quantity)).map((tile, index) => {
+        wrapper.appendChild(createTile(index));
+    });
+}
+
+const createGrid = () => {
+    wrapper.innerHTML = "";
+
+    const size = document.body.clientWidth > 800 ? 100 : 50;
+
+    columns = Math.floor(document.body.clientWidth / size);
+    rows = Math.floor(document.body.clientHeight / size);
+
+    wrapper.style.setProperty("--columns", columns);
+    wrapper.style.setProperty("--rows", rows);
+
+    createTiles(columns * rows);
+}
+
+createGrid();
+
+window.onresize = () => createGrid();
 
 jQuery(function () {
-    hasWebP().then(function () {
-        setBackground("webp");
-    }, function () {
-        setBackground("jpg");
-    });
-
     $(".main")
         .css({
             "opacity": 0,
-            "top": 500
+            "top": "100%"
         })
         .animate({
             opacity: 1,
             top: 0
         }, {
             queue: false,
-            duration: 1000
+            duration: 1250
         });
     $('#avatar').on("click", function () {
         $(this).css({

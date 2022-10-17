@@ -24,18 +24,18 @@ jQuery(function () {
 		setBackground("jpg");
 	});
 
-	$(".main")
-		.css({
-			"opacity": 0,
-			"top": 500
-		})
-		.animate({
-			opacity: 1,
-			top: 0
-		}, {
-			queue: false,
-			duration: 1000
-		});
+    $(".main")
+        .css({
+            "opacity": 0,
+            "top": "100%"
+        })
+        .animate({
+            opacity: 1,
+            top: 0
+        }, {
+            queue: false,
+            duration: 1250
+        });
 
 	$('#avatar').on("click", function () {
 		$(this).css({

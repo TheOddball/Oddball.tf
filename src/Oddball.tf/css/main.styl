@@ -1,35 +1,79 @@
 @import './productsans.styl'
 
+:root
+    --g1 #36bbf7
+    --g2 #702df9
+
 body
   overflow hidden
   margin 0
   padding 0
   filter drop-shadow(10px 10px 20px black)
-  background-position center
-  background-size cover
-  background-repeat no-repeat
-  color #fff
+  color #fff !important
   font-weight 300
   font-size 100%
-  font-family 'Product Sans', Helvetica, Arial, sans-serif
+  font-family 'Product Sans', Helvetica, Arial, sans-serif    
+  animation background-pan 10s linear infinite !important
+  background linear-gradient(
+      to right,
+      var(--g1),
+      var(--g2),
+      var(--g1)
+  )
+  background-size 200%
+  height 100vh
 
-@keyframes gradient
-  0%
-    background-position 0%
+  &.toggled
+        animation none
 
-  100%
-    background-position 100%
+        & > #title
+            opacity 0
+
+        & > #icon
+            opacity 1
+
+        & > #tiles
+            & > .tile
+                &:hover
+                    opacity 0.1 !important
+
+    &.menu-toggled
+        & > .meta-link
+            & > span
+                color rgb(30, 30, 30)
+
+@keyframes background-pan
+    from
+        background-position 0% center
+    to
+        background-position -200% center
+
+.ulshadow
+  background none
+  filter blur(12px)
+  animation gradient 3s ease infinite
+  background-size 200% 100%
+  animation-direction alternate
+  position: relative
+  z-index 1
+  width 800px
+  height 175px
+  margin: 0 auto
+  border-radius: 100px
 
 .main
   position relative
-  top 45%
+  top 50%
   text-align center
   transform translateY(25%)
+  z-index 3
+  pointer-events: none
 
 #avatar
   width 175px
   height 175px
   border-radius 100px
+  pointer-events: all
 
 .topping
   & > .container-top
@@ -58,26 +102,31 @@ h3
 .list-group
   text-align center
 
-.ulshadow
-  background linear-gradient(45deg, #000 0%, #6C6C6C 100%)
-  filter blur(12px)
-  animation gradient 3s ease infinite
-  background-size 200% 100%
-  animation-direction alternate
-  position: relative
-  z-index 1
-  width 800px
-  height 175px
-  margin: 0 auto
-  border-radius: 100px
+#tiles
+    height calc(100vh - 1px)
+    width calc(100vw - 1px)
+    position absolute
+    z-index 2
+    display grid
+    grid-template-columns repeat(var(--columns), 1fr)
+    grid-template-rows repeat(var(--rows), 1fr)
+
+.tile
+    cursor pointer
+    position relative
+
+    &:hover
+        &:before
+            background-color rgb(30, 30, 30)
+
+    &:before
+        background-color rgb(15, 15, 15)
+        content ''
+        inset 0.5px
+        position absolute
 
 ul
   padding 10px
-  background linear-gradient(45deg, #000 0%, #6C6C6C 100%)
-  animation gradient 3s ease infinite
-  background-size 200% 100%
-  animation-direction alternate
-  border-radius 100px
   margin 0 auto
   width max-content
   z-index 5
@@ -90,13 +139,13 @@ ul
     list-style-type none
     top 2px
     position relative
+    pointer-events: all
 
     &:first-of-type
       padding-left 0
 
     img
       width 125px
-      opacity 0.8
       transition all 0.4s ease-in-out
       position relative
 

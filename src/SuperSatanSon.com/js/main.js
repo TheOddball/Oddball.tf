@@ -2,16 +2,16 @@ import $ from 'jquery'
 window.$ = window.jQuery = $
 
 jQuery(function () {
-	$(".main")
-		.css({
-			"opacity": 0,
-			"top": 500
-		})
-		.animate({
-			opacity: 1,
-			top: 0
-		}, {
-			queue: false,
-			duration: 1000
-		});
+    $(".main")
+        .css({
+            "opacity": 0,
+            "top": "100%"
+        })
+        .animate({
+            opacity: 1,
+            top: 0
+        }, {
+            queue: false,
+            duration: 1250
+        });
 });

@@ -1,9 +1,5 @@
 @import './productsans.styl'
 
-:root
-  --g1 #36bbf7
-  --g2 #702df9
-
 body
   overflow hidden
   margin 0
@@ -12,24 +8,21 @@ body
   font-weight 300
   font-size 100%
   font-family 'Product Sans', Helvetica, Arial, sans-serif
-  animation background-pan 10s linear infinite !important
+  animation background-pan 5s linear infinite
   background linear-gradient(
     to right,
-    var(--g1),
-    var(--g2),
-    var(--g1)
+    #36bbf7,
+    #702df9,
+    #36bbf7
   )
   background-size 200%
-  height 100vh
+  height 100%
 
   &.toggled
-    animation none
+    animation background-pan 10s linear infinite
 
     & > #title
       opacity 0
-
-    & > #icon
-      opacity 1
 
     & > #tiles
       & > .tile
@@ -39,7 +32,7 @@ body
   &.menu-toggled
     & > .meta-link
       & > span
-        color rgb(30, 30, 30)
+        color #1e1e1e
 
 @keyframes background-pan
   from
@@ -47,19 +40,6 @@ body
 
   to
     background-position -200% center
-
-.ulshadow
-  background none
-  filter blur(12px)
-  animation gradient 3s ease infinite
-  background-size 200% 100%
-  animation-direction alternate
-  position relative
-  z-index 1
-  width 800px
-  height 175px
-  margin 0 auto
-  border-radius 100px
 
 .main
   position relative
@@ -84,12 +64,11 @@ body
     max-width 75%
 
 .summary
-  min-height 75vh
+  min-height 100vh
 
   & > h1
     font-weight 500
     font-size 650%
-    // background linear-gradient(45deg, #36bbf7 0%, #702df9 100%)
     animation gradient 3s ease infinite
     background-size 200% 100%
     animation-direction alternate
@@ -105,8 +84,8 @@ h3
   text-align center
 
 #tiles
-  height calc(100vh - 1px)
-  width calc(100vw - 1px)
+  height calc(100% - 1px)
+  width calc(100% - 1px)
   position absolute
   z-index 2
   display grid
@@ -119,10 +98,10 @@ h3
 
   &:hover
     &:before
-      background-color rgb(30, 30, 30)
+      background-color #1e1e1e
 
   &:before
-    background-color rgb(15, 15, 15)
+    background-color #0f0f0f
     content ''
     inset 0.5px
     position absolute
@@ -133,7 +112,6 @@ ul
   width max-content
   z-index 5
   position relative
-  top -160px
 
   li
     display inline-block
@@ -148,9 +126,9 @@ ul
 
     img
       width 125px
-      transition all 0.4s ease-in-out
+      transition all 0.2s ease-in-out
       position relative
       filter drop-shadow(10px 10px 20px black)
 
       &:hover
-        transform scale(1.025)
+        transform scale(1.075)

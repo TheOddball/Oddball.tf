@@ -20,7 +20,7 @@ const handleOnClick = index => {
     anime({
         targets: ".tile",
         opacity: toggled ? 0 : 1,
-        delay: anime.stagger(50, {
+        delay: anime.stagger(25, {
             grid: [columns, rows],
             from: index
         })
@@ -48,7 +48,7 @@ const createTiles = quantity => {
 const createGrid = () => {
     wrapper.innerHTML = "";
 
-    const size = document.body.clientWidth > 800 ? 100 : 50;
+    const size = document.body.clientWidth > 800 ? 60 : 30;
 
     columns = Math.floor(document.body.clientWidth / size);
     rows = Math.floor(document.body.clientHeight / size);
@@ -78,7 +78,7 @@ jQuery(function () {
         });
     $('#avatar').on("click", function () {
         $(this).css({
-            "transition": "all .5s ease",
+            "transition": "all .4s ease",
             "rotate": '360deg'
         })
         setTimeout(function () {

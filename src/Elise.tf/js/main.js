@@ -1,52 +1,24 @@
-import $ from 'jquery'
-window.$ = window.jQuery = $
+import anime from 'animejs'
 
-var numberOfBackgrounds = 22;
+const numberOfBackgrounds = 22;
+const wallpaper = Math.floor(Math.random() * numberOfBackgrounds + 1);
+const url = "./backgrounds/webp/bg" + wallpaper + ".webp";
+document.querySelector('body').style.backgroundImage = "url(" + url + ")"
 
-function hasWebP() {
-	var rv = $.Deferred(), img = new Image();
-	img.onload = function () { rv.resolve(); };
-	img.onerror = function () { rv.reject(); };
-	img.src = "https://www.gstatic.com/webp/gallery/1.webp";
-	return rv.promise();
-}
+const animateAvatar = anime({
+    targets: '.avatar',
+    rotate: '1turn',
+    duration: 2500,
+    loop: 1,
+    autoplay: false
+})
 
-function setBackground(webPSupport) {
-	var wallpaper = Math.floor(Math.random() * numberOfBackgrounds + 1);
-	var url = "./backgrounds/" + webPSupport + "/bg" + wallpaper + "." + webPSupport;
-	$("body").css("background-image", "url(" + url + ")");
-}
+document.querySelector('.avatar').onclick = animateAvatar.play
 
-jQuery(function () {
-	hasWebP().then(function () {
-		setBackground("webp");
-	}, function () {
-		setBackground("jpg");
-	});
-
-    $(".main")
-        .css({
-            "opacity": 0,
-            "top": "100%"
-        })
-        .animate({
-            opacity: 1,
-            top: 0
-        }, {
-            queue: false,
-            duration: 1250
-        });
-
-	$('#avatar').on("click", function () {
-		$(this).css({
-			"transition": "all .5s ease",
-			"rotate": '360deg'
-		})
-		setTimeout(function () {
-			$('#avatar').css({
-				"transition": "none",
-				"rotate": '0deg'
-			})
-		}, 500)
-	})
-});
+anime({
+    targets: '.main',
+    opacity: 1,
+    top: '0',
+    duration: 2500,
+    easing: 'easeOutElastic(3, 1)'
+})

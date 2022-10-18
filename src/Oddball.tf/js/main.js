@@ -1,6 +1,6 @@
 import anime from 'animejs'
 
-const wrapper = document.getElementById("tiles");
+const wrapper = document.querySelector(".tiles");
 
 let columns = 0,
     rows = 0,
@@ -57,19 +57,15 @@ const createGrid = () => {
     createTiles(columns * rows);
 }
 
-createGrid();
-
-window.onresize = () => createGrid();
-
-var animateAvatar = anime({
-    targets: '#avatar',
+const animateAvatar = anime({
+    targets: '.avatar',
     rotate: '1turn',
     duration: 2500,
     loop: 1,
     autoplay: false
 })
 
-document.querySelector('#avatar').onclick = animateAvatar.play
+document.querySelector('.avatar').onclick = animateAvatar.play
 
 anime({
     targets: '.main',
@@ -78,3 +74,7 @@ anime({
     duration: 2500,
     easing: 'easeOutElastic(3, 1)'
 })
+
+createGrid();
+
+window.onresize = () => createGrid();

@@ -23,7 +23,6 @@
         "@parcel/transformer-xml": "^2.7.0",
         "@parcel/validator-eslint": "^2.7.0",
         "animejs": "^3.2.1",
-        "jquery": "^3.6.1",
         "parcel": "^2.7.0",
         "parcel-reporter-static-files-copy": "^1.4.0",
         "pug": "^3.0.0",

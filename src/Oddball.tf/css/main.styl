@@ -49,12 +49,18 @@ body
   z-index 3
   pointer-events none
 
-#avatar
+.avatarContainer
+  width: max-content
+  height: max-content
+  margin: 0 auto
+  border-radius: 100px
+  filter drop-shadow(10px 10px 20px black)
+  
+.avatar
   width 175px
   height 175px
   border-radius 100px
   pointer-events all
-  filter drop-shadow(10px 10px 20px black)
 
 .topping
   & > .container-top
@@ -83,7 +89,7 @@ h3
 .list-group
   text-align center
 
-#tiles
+.tiles
   height calc(100% - 1px)
   width calc(100% - 1px)
   position absolute

@@ -24,12 +24,13 @@ html(lang='en' style='height:100%' charset='UTF-8')
         link(href='./css/main.styl' rel='stylesheet' type='text/css')
         script(src='js/main.js' type='module')
     body
-        #tiles
+        .tiles
         .main(style="opacity:0; top:100%")
             .topping
                 .container-top
                     .summary
-                        img#avatar(src='https://avatars.githubusercontent.com/theoddball' alt='Avatar' height='200' width='200')
+                        .avatarContainer 
+                            img.avatar(src='https://avatars.githubusercontent.com/theoddball' alt='Avatar' height='200' width='200')
                         h1 The Oddball
                         .list-group
                             ul

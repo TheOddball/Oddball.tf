@@ -4,7 +4,6 @@ body
   overflow hidden
   margin 0
   padding 0
-  filter drop-shadow(10px 10px 20px black)
   background-position center
   background-size cover
   background-repeat no-repeat
@@ -18,6 +17,7 @@ footer
   position fixed
   bottom 0
   width 100%
+
   >a>img
     width 30px
     float right
@@ -38,10 +38,19 @@ footer
   text-align center
   transform translateY(25%)
 
-#avatar
+.avatarContainer
+  width max-content
+  height max-content
+  margin 0 auto
+  border-radius 100px
+  filter drop-shadow(10px 10px 20px black)
+
+.avatar
   width 175px
   height 175px
   border-radius 100px
+  pointer-events all
+  filter none
 
 .topping
   & > .container-top
@@ -63,6 +72,7 @@ footer
     width max-content
     border-radius 100px
     margin 20px auto
+    filter drop-shadow(10px 10px 20px black)
 
 h3
   font-size 250%
@@ -71,24 +81,23 @@ h3
   text-align center
 
 .ulshadow
-  margin: 0 auto
-  border-radius: 100px
+  margin 0 auto
+  border-radius 100px
   background linear-gradient(45deg, #B4B4B4 0%, #7C4CDE 100%)
   filter blur(12px)
   animation gradient 3s ease infinite
   background-size 200% 100%
   animation-direction alternate
-  position: relative
+  position relative
   z-index 1
   height 175px
 
   &:first-of-type
     width 610px
-  
+
   &:last-of-type
     width 490px
     top -160px
-    
 
 ul
   padding 10px
@@ -100,7 +109,7 @@ ul
   margin 0 auto
   width max-content
   z-index 5
-  position: relative
+  position relative
   top -160px
 
   &:last-of-type
@@ -112,6 +121,7 @@ ul
     list-style-type none
     top 2px
     position relative
+    filter drop-shadow(10px 10px 20px black)
 
     &:first-of-type
       padding-left 0

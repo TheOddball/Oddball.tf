@@ -1,5 +1,3 @@
-import $ from 'jquery'
-window.$ = window.jQuery = $
 import anime from 'animejs'
 
 const wrapper = document.getElementById("tiles");
@@ -63,29 +61,20 @@ createGrid();
 
 window.onresize = () => createGrid();
 
-jQuery(function () {
-    $(".main")
-        .css({
-            "opacity": 0,
-            "top": "100%"
-        })
-        .animate({
-            opacity: 1,
-            top: 0
-        }, {
-            queue: false,
-            duration: 1250
-        });
-    $('#avatar').on("click", function () {
-        $(this).css({
-            "transition": "all .4s ease",
-            "rotate": '360deg'
-        })
-        setTimeout(function () {
-            $('#avatar').css({
-                "transition": "none",
-                "rotate": '0deg'
-            })
-        }, 500)
-    })
-});
+var animateAvatar = anime({
+    targets: '#avatar',
+    rotate: '1turn',
+    duration: 2500,
+    loop: 1,
+    autoplay: false
+})
+
+document.querySelector('#avatar').onclick = animateAvatar.play
+
+anime({
+    targets: '.main',
+    opacity: 1,
+    top: '0',
+    duration: 2500,
+    easing: 'easeOutElastic(3, 1)'
+})

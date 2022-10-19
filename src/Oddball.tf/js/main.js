@@ -60,7 +60,7 @@ const createGrid = () => {
 const animateAvatar = anime({
     targets: '.avatar',
     rotate: '1turn',
-    duration: 2500,
+    duration: 2200,
     loop: 1,
     autoplay: false
 })
@@ -71,8 +71,8 @@ anime({
     targets: '.main',
     opacity: 1,
     top: '0',
-    duration: 2500,
-    easing: 'easeOutElastic(3, 1)'
+    duration: 1500,
+    easing: 'easeOutElastic(3, 1.2)'
 })
 
 createGrid();

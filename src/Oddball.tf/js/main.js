@@ -70,7 +70,7 @@ document.querySelector('.avatar').onclick = animateAvatar.play
 anime({
     targets: '.main',
     opacity: 1,
-    top: '0',
+    translateY: '0%',
     duration: 1500,
     easing: 'easeOutElastic(3, 1.2)'
 })

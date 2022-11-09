@@ -19,7 +19,7 @@
         "@parcel/transformer-image": "^2.7.0",
         "@parcel/transformer-pug": "^2.7.0",
         "@parcel/transformer-stylus": "^2.7.0",
-        "@parcel/transformer-webmanifest": "^2.7.0",
+        "@parcel/transformer-webmanifest": "^2.8.0",
         "@parcel/transformer-xml": "^2.7.0",
         "@parcel/validator-eslint": "^2.7.0",
         "animejs": "^3.2.1",

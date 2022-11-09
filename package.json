@@ -21,7 +21,7 @@
         "@parcel/transformer-stylus": "^2.7.0",
         "@parcel/transformer-webmanifest": "^2.7.0",
         "@parcel/transformer-xml": "^2.7.0",
-        "@parcel/validator-eslint": "^2.7.0",
+        "@parcel/validator-eslint": "^2.8.0",
         "animejs": "^3.2.1",
         "parcel": "^2.7.0",
         "parcel-reporter-static-files-copy": "^1.4.0",

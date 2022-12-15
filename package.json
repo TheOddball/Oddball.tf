@@ -14,7 +14,7 @@
         "build-elise": "parcel build ./src/Elise.tf/index.pug --public-url ./"
     },
     "dependencies": {
-        "@parcel/core": "^2.8.1",
+        "@parcel/core": "^2.8.2",
         "@parcel/packager-raw-url": "^2.8.1",
         "@parcel/packager-xml": "^2.8.1",
         "@parcel/transformer-image": "^2.8.1",

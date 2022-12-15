@@ -19,7 +19,7 @@
         "@parcel/packager-xml": "^2.8.1",
         "@parcel/transformer-image": "^2.8.1",
         "@parcel/transformer-pug": "^2.8.1",
-        "@parcel/transformer-stylus": "^2.8.1",
+        "@parcel/transformer-stylus": "^2.8.2",
         "@parcel/transformer-webmanifest": "^2.8.1",
         "@parcel/transformer-xml": "^2.8.1",
         "@parcel/validator-eslint": "^2.8.1",

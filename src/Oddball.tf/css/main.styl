@@ -6,20 +6,24 @@ body
   padding 0
   color #fff !important
   font-weight 300
-  font-size 100%
+  font-size 107%
   font-family 'Product Sans', Helvetica, Arial, sans-serif
   animation background-pan 5s linear infinite
-  background linear-gradient(
-    to right,
-    #FF64B7,
-    #C584FF,
-    #FF64B7
-  )
+  background linear-gradient(to right, #572FE5, #EE00FF, #572FE5)
   background-size 200%
   height 100%
 
   &.toggled
     animation background-pan 10s linear infinite
+
+    .avatarContainer, h1
+      filter drop-shadow(10px 10px 20px #000)
+    
+    ul
+      li
+        img
+          filter drop-shadow(10px 10px 20px #000)
+
 
     & > #title
       opacity 0
@@ -28,11 +32,6 @@ body
       & > .tile
         &:hover
           opacity 0.1 !important
-
-  &.menu-toggled
-    & > .meta-link
-      & > span
-        color #1e1e1e
 
 @keyframes background-pan
   from
@@ -49,16 +48,14 @@ body
   pointer-events none
 
 .avatarContainer
-  width: max-content
-  height: max-content
-  margin: 0 auto
-  border-radius: 100px
-  filter drop-shadow(10px 10px 20px black)
+  width max-content
+  height max-content
+  margin 0 auto
+  border-radius 100px
+  transition filter 0.5s ease-in-out
 
 .avatar
-  width 15vh
-  height 15vh
-  border-radius 100px
+  border-radius 100%
   pointer-events all
 
 .topping
@@ -76,8 +73,8 @@ body
     animation-direction alternate
     width max-content
     border-radius 100px
-    margin 20px auto
-    filter drop-shadow(10px 10px 20px black)
+    margin 30px auto
+    transition filter 0.5s ease-in-out
 
 .list-group
   text-align center
@@ -92,15 +89,14 @@ body
   grid-template-rows repeat(var(--rows), 1fr)
 
 .tile
-  cursor pointer
   position relative
 
   &:hover
     &:before
-      background-color #1e1e1e
+      background-color #141414
 
   &:before
-    background-color #0f0f0f
+    background-color #080808
     content ''
     inset 0.5px
     position absolute
@@ -114,38 +110,45 @@ ul
   li
     display inline-block
     list-style-type none
-    top 2px
     position relative
     pointer-events all
 
     img
       width 12vh
       transition all 0.2s ease-in-out
+      transition filter 0.5s ease-in-out
       position relative
-      filter drop-shadow(10px 10px 20px black)
 
       &:hover
         transform scale(1.075)
 
-@media only screen and (max-width: 700px)
+@media only screen and (max-width 700px)
   h1
-    font-size: 350%
+    font-size 350%
 
   ul
-    width: 30vh
-  
+    width 30vh
+
   li
-    padding: 5px
+    padding 5px
+
+  .avatar
+    width 10vh
+    height 10vh
 
 @media only screen and (min-width 700px)
   h1
-    font-size: 650%
+    font-size 650%
 
   ul
-    width: max-content
-  
+    width max-content
+
   li
-    padding-left: 20px
+    padding-left 30px
 
     &:first-of-type
       padding-left 0
+
+  .avatar
+    width 16vh
+    height 16vh

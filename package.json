@@ -24,7 +24,7 @@
         "@parcel/transformer-xml": "^2.8.2",
         "@parcel/validator-eslint": "^2.8.2",
         "animejs": "^3.2.1",
-        "parcel": "^2.8.2",
+        "parcel": "^2.8.3",
         "parcel-reporter-static-files-copy": "^1.4.0"
     }
 }

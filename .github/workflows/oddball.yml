@@ -50,16 +50,6 @@ jobs:
         cd dist
         gsutil -m cp -r ./ gs://bdino.info
         cd ..
-
-    - name: Build adhdsenpai.com
-      run: |
-        rm -rf dist
-        npm run build-adhd
-    - name: Upload adhdsenpai.com
-      run: |
-        cd dist
-        gsutil -m cp -r ./ gs://adhdsenpai.com
-        cd .. 
         
     - name: Set up Google Cloud for Elise.tf
       run: |

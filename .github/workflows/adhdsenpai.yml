@@ -28,9 +28,7 @@ jobs:
         npm run build-adhd
     - name: Upload adhdsenpai.com
       run: |
-        cd dist
         npx wrangler pages publish --project-name adhdsenpai-com ./dist
-        cd .. 
       env:
         CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

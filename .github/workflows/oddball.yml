@@ -30,16 +30,6 @@ jobs:
       env:
         GCLOUD_SERVICE_KEY: ${{ secrets.GCLOUD_SERVICE_KEY }}
         GOOGLE_PROJECT_ID: ${{ secrets.GOOGLE_PROJECT_ID }}
-    
-    - name: Build Oddball.tf
-      run: |
-        rm -rf dist
-        npm run build-oddball        
-    - name: Upload Oddball.tf
-      run: |
-        cd dist
-        gsutil -m cp -r ./ gs://oddball.tf
-        cd ..
         
     - name: Build SuperSatanSon.com
       run: |

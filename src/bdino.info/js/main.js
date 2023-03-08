@@ -14,11 +14,12 @@ const animateAvatar = anime({
 })
 
 document.querySelector('.avatar').onclick = animateAvatar.play
-
+const windowHeight = window.innerHeight
+const mainHeight = document.querySelector('.main').offsetHeight
+const top = (windowHeight - mainHeight) + "px"
 anime({
     targets: '.main',
-    opacity: 1,
-    top: '0',
-    duration: 2500,
-    easing: 'easeOutElastic(3, 1)'
+    top: top,
+    duration: 1250,
+    easing: 'easeOutElastic(8, 4)'
 })

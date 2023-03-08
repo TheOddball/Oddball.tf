@@ -23,7 +23,7 @@ jobs:
     - name: Npm Install
       run: npm install
     - name: Build elise.tf
-      run: npm run build-adhd
+      run: npm run build-elise
     - name: Upload elise.tf
       run: npx wrangler pages publish --project-name elise-tf --branch=master ./dist
       env:

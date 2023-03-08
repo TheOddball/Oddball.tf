@@ -1,4 +1,4 @@
-name: Build AdhdSenpai.com
+name: Build SuperSatanSon.com
 
 on: 
   push:
@@ -22,10 +22,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Npm Install
       run: npm install
-    - name: Build adhdsenpai.com
-      run: npm run build-adhd
-    - name: Upload adhdsenpai.com
-      run: npx wrangler pages publish --project-name adhdsenpai-com ./dist
+    - name: Build supersatanson.com
+      run: npm run build-SSS
+    - name: Upload supersatanson.com
+      run: npx wrangler pages publish --project-name supersatanson-com ./dist
       env:
         CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

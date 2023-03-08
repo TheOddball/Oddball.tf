@@ -1,4 +1,4 @@
-name: Build AdhdSenpai.com
+name: Build Elise.tf
 
 on: 
   push:
@@ -22,10 +22,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Npm Install
       run: npm install
-    - name: Build adhdsenpai.com
+    - name: Build elise.tf
       run: npm run build-adhd
-    - name: Upload adhdsenpai.com
-      run: npx wrangler pages publish --project-name adhdsenpai-com ./dist
+    - name: Upload elise.tf
+      run: npx wrangler pages publish --project-name elise-tf ./dist
       env:
         CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

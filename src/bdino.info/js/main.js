@@ -17,6 +17,7 @@ document.querySelector('.avatar').onclick = animateAvatar.play
 const windowHeight = window.innerHeight
 const mainHeight = document.querySelector('.main').offsetHeight
 const top = (windowHeight - mainHeight) + "px"
+console.log(top)
 anime({
     targets: '.main',
     top: top,

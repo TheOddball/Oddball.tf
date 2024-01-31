@@ -14,18 +14,18 @@
         "build-elise": "parcel build ./src/Elise.tf/index.pug --public-url ./"
     },
     "dependencies": {
-        "@parcel/core": "^2.9.3",
-        "@parcel/packager-raw-url": "^2.9.3",
-        "@parcel/packager-xml": "^2.9.3",
-        "@parcel/transformer-image": "^2.9.3",
-        "@parcel/transformer-pug": "^2.9.3",
-        "@parcel/transformer-stylus": "^2.9.3",
-        "@parcel/transformer-webmanifest": "^2.9.3",
-        "@parcel/transformer-xml": "^2.9.3",
-        "@parcel/validator-eslint": "^2.9.3",
-        "animejs": "^3.2.1",
-        "parcel": "^2.9.3",
+        "@parcel/core": "^2.11.0",
+        "@parcel/packager-raw-url": "^2.11.0",
+        "@parcel/packager-xml": "^2.11.0",
+        "@parcel/transformer-image": "^2.11.0",
+        "@parcel/transformer-pug": "^2.11.0",
+        "@parcel/transformer-stylus": "^2.11.0",
+        "@parcel/transformer-webmanifest": "^2.11.0",
+        "@parcel/transformer-xml": "^2.11.0",
+        "@parcel/validator-eslint": "^2.11.0",
+        "animejs": "^3.2.2",
+        "parcel": "^2.11.0",
         "parcel-reporter-static-files-copy": "^1.5.3",
-        "wrangler": "^3.9.0"
+        "wrangler": "^3.25.0"
     }
 }

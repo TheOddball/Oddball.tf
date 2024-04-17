@@ -11,9 +11,10 @@ body
   animation background-pan 7s linear infinite
   background linear-gradient(
         to right,         
-        #202020 0%,
-        #C778FF 50%,
-        #202020 100%
+        #000 0%,
+        #8226ED 50%,
+        #000 60%,
+        #000 100%
   )
 
   background-size 200%
@@ -102,10 +103,11 @@ body
       background-color #141414
 
   &:before
-    background-color #080808
+    background-color #000
     content ''
     inset 0.5px
     position absolute
+    transition background-color .1s linear
 
 ul
   padding 10px

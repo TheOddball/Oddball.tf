@@ -26,6 +26,6 @@
         "animejs": "^3.2.2",
         "parcel": "^2.12.0",
         "parcel-reporter-static-files-copy": "^1.5.3",
-        "wrangler": "^3.63.2"
+        "wrangler": "^3.67.0"
     }
 }

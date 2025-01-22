@@ -7,8 +7,6 @@
 1. [Oddball.tf](https://oddball.tf)
 2. [Elise.tf](https://elise.tf)
 3. [BDino.info](https://bdino.info)
-4. [SuperSatanSon.com](https://supersatanson.com)
-5. [ADHDSenpai.com](https://adhdsenpai.com)
 
 ### Build Instructions:
 

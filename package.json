@@ -17,7 +17,7 @@
         "@parcel/core": "^2.13.3",
         "@parcel/packager-raw-url": "^2.13.3",
         "@parcel/packager-xml": "^2.13.3",
-        "@parcel/transformer-image": "^2.13.3",
+        "@parcel/transformer-image": "^2.14.4",
         "@parcel/transformer-pug": "^2.13.3",
         "@parcel/transformer-stylus": "^2.13.3",
         "@parcel/transformer-webmanifest": "^2.13.3",

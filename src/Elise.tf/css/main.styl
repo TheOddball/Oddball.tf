@@ -1,28 +1,29 @@
 body
-  overflow hidden
-  margin 0
-  padding 0
   background-position center
   background-size cover
   background-repeat no-repeat
-  color #fff
+  overflow hidden
+  margin 0
+  padding 0
+  color #fff !important
   font-weight 300
-  font-size 100%
+  font-size 107%
   font-family 'Product Sans', Helvetica, Arial, sans-serif
   height 100%
 
 @keyframes gradient
   0%
-    background-position 0%
+    background-position 0
 
   100%
     background-position 100%
 
 .main
   position relative
-  top 45%
   text-align center
-  transform translateY(25%)
+  top 25%
+  z-index 3
+  pointer-events none
 
 .avatarContainer
   width max-content
@@ -32,21 +33,16 @@ body
   filter drop-shadow(10px 10px 20px black)
 
 .avatar
-  width 175px
-  height 175px
-  border-radius 100px
+  border-radius 100%
   pointer-events all
-  filter none
 
 .topping
   & > .container-top
-    margin-right auto
-    margin-left auto
     min-width 50%
-    max-width 75%
+    max-width 100%
 
 .summary
-  min-height 75vh
+  min-height 100vh
 
   & > h1
     font-weight 500
@@ -64,7 +60,6 @@ h3
   background-size 200% 100%
   animation-direction alternate
   position relative
-  z-index 1
   width 800px
   height 175px
   margin 0 auto
@@ -82,9 +77,9 @@ ul
   border-radius 100px
   margin 0 auto
   width max-content
-  z-index 5
   position relative
   top -160px
+  pointer-events all
 
   li
     display inline-block
@@ -93,6 +88,7 @@ ul
     top 2px
     position relative
     filter drop-shadow(10px 10px 20px black)
+    pointer-events all
 
     &:first-of-type
       padding-left 0
@@ -100,11 +96,7 @@ ul
     img
       width 125px
       opacity 0.8
-      transition all 0.4s ease-in-out
-      position relative
-
-      &:hover
-        transform scale(1.025)
+      pointer-events all
 
 footer
   position fixed
@@ -117,3 +109,33 @@ footer
     position relative
     right 5px
     bottom 5px
+@media only screen and (max-width 700px)
+  h1
+    font-size 350%
+
+  ul
+    width 30vh
+
+  li
+    padding 5px
+
+  .avatar
+    width 10vh
+    height 10vh
+
+@media only screen and (min-width 700px)
+  h1
+    font-size 650%
+
+  ul
+    width max-content
+
+  li
+    padding-left 30px
+
+    &:first-of-type
+      padding-left 0
+
+  .avatar
+    width 16vh
+    height 16vh

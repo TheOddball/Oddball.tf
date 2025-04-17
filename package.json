@@ -3,30 +3,26 @@
     "version": "1.2.0",
     "scripts": {
         "test": "parcel ./src/Oddball.tf/index.pug",
-        "test-adhd": "parcel ./src/adhdsenpai.com/index.pug",
         "test-elise": "parcel ./src/Elise.tf/index.pug",
-        "test-SSS": "parcel ./src/SuperSatanSon.com/index.pug",
         "test-bdino": "parcel ./src/bdino.info/index.pug",
         "build-oddball": "parcel build ./src/Oddball.tf/index.pug --public-url ./",
-        "build-SSS": "parcel build ./src/SuperSatanSon.com/index.pug --public-url ./",
-        "build-adhd": "parcel build ./src/adhdsenpai.com/index.pug --public-url ./",
         "build-bdino": "parcel build ./src/bdino.info/index.pug",
         "build-elise": "parcel build ./src/Elise.tf/index.pug --public-url ./"
     },
     "dependencies": {
-        "@parcel/core": "^2.13.3",
-        "@parcel/packager-raw-url": "^2.13.3",
-        "@parcel/packager-xml": "^2.13.3",
-        "@parcel/transformer-image": "^2.13.3",
-        "@parcel/transformer-pug": "^2.13.3",
-        "@parcel/transformer-stylus": "^2.13.3",
-        "@parcel/transformer-webmanifest": "^2.13.3",
-        "@parcel/transformer-xml": "^2.13.3",
-        "@parcel/validator-eslint": "^2.13.3",
-        "animejs": "^3.2.2",
-        "parcel": "^2.13.3",
+        "@parcel/core": "^2.14.4",
+        "@parcel/packager-raw-url": "^2.14.4",
+        "@parcel/packager-xml": "^2.14.4",
+        "@parcel/transformer-image": "^2.14.4",
+        "@parcel/transformer-pug": "^2.14.4",
+        "@parcel/transformer-stylus": "^2.14.4",
+        "@parcel/transformer-webmanifest": "^2.14.4",
+        "@parcel/transformer-xml": "^2.14.4",
+        "@parcel/validator-eslint": "^2.14.4",
+        "animejs": "^4.0.1",
+        "parcel": "^2.14.4",
         "parcel-reporter-static-files-copy": "^1.5.3",
-        "wrangler": "^3.103.2"
+        "wrangler": "^4.11.1"
     },
     "devDependencies": {
         "svgo": "^3.3.2"

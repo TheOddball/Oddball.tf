@@ -22,9 +22,9 @@ html(lang='en' style='height:100%;')
         meta(name="msapplication-config" content="./img/site/favicon/browserconfig.xml")
         meta(name="theme-color" content="#9f6bcf")
         link(href='./css/main.styl' rel='stylesheet' type='text/css')
-        script(src='js/main.js' type='module')
+        script(src='./js/main.js' type='module')
     body
-        .main(style="opacity:0; top:100%")
+        .main(style="opacity:0; transform:translateY(100%)")
             .topping
                 .container-top
                     .summary
@@ -32,24 +32,23 @@ html(lang='en' style='height:100%;')
                             img.avatar(src='./img/site/elise.png' alt='Avatar' height='200' width='200')
                         h1 Elise
                         .list-group
-                            .ulshadow 
-
+                            .ulshadow
                             ul
                                 li
                                     a(href='https://steamcommunity.com/id/pixelqt')
-                                        img(src='./img/site/steam.svg')
+                                        img.lnk(src='./img/site/steam.svg')
                                 li
                                     a(href='https://discord.com/users/157358446088421376')
-                                        img(src='./img/site/discord.svg')
+                                        img.lnk(src='./img/site/discord.svg')
                                 li
                                     a(href='https://vrchat.com/home/user/usr_e50246de-e448-4a87-b756-d23bf35ae13e')
-                                        img(src='./img/site/vrchat.svg')
+                                        img.lnk(src='./img/site/vrchat.svg')
                                 li
                                     a(href='https://na.finalfantasyxiv.com/lodestone/character/20060964/')
-                                        img(src='./img/site/ffxiv.svg')
+                                        img.lnk(src='./img/site/ffxiv.svg')
                                 li
                                     a(href='https://www.fflogs.com/character/id/18832090')
-                                        img(src='./img/site/fflogs.svg')
+                                        img.lnk(src='./img/site/fflogs.svg')
         script.
             (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {

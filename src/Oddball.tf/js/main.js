@@ -1,45 +1,22 @@
-import anime from 'animejs'
+import {animate} from 'animejs';
 
 const wrapper = document.querySelector(".tiles");
 
 let columns = 0,
     rows = 0,
-    toggled = false;
+    avatarClicks = 0;
 
-const toggle = () => {
-    toggled = !toggled;
-
-    document.body.classList.toggle("toggled");
-}
-
-const handleOnClick = index => {
-    toggle();
-
-    anime({
-        targets: ".tile",
-        opacity: toggled ? 0 : 1,
-        delay: anime.stagger(25, {
-            grid: [columns, rows],
-            from: index
-        })
-    });
-}
-
-const createTile = index => {
+const createTile = () => {
     const tile = document.createElement("div");
 
     tile.classList.add("tile");
-
-    tile.style.opacity = toggled ? 0 : 1;
-
-    tile.onclick = () => handleOnClick(index);
 
     return tile;
 }
 
 const createTiles = quantity => {
-    Array.from(Array(quantity)).map((tile, index) => {
-        wrapper.appendChild(createTile(index));
+    Array.from(Array(quantity)).map(() => {
+        wrapper.appendChild(createTile());
     });
 }
 
@@ -57,22 +34,40 @@ const createGrid = () => {
     createTiles(columns * rows);
 }
 
-const animateAvatar = anime({
-    targets: '.avatar',
+const animateAvatar = animate('.avatar',{
     rotate: '1turn',
-    duration: 2200,
-    loop: 1,
-    autoplay: false
+    duration: 1000,
+    autoplay: false,
+    ease: 'inOutElastic(.5, 1.6)'
 })
 
-document.querySelector('.avatar').onclick = animateAvatar.play
+const handleAvatarClick = () => {
+    if (avatarClicks === 0){animateAvatar.play()}else{animateAvatar.restart()}
+    avatarClicks++;
+}
+document.querySelector('.avatar').onclick = handleAvatarClick;
 
-anime({
-    targets: '.main',
+let link = document.querySelectorAll('.lnk');
+for (let i of link) {
+    i.addEventListener('mouseenter', () => {
+        animate(i, {
+            scale: 1.075,
+            duration: 300,
+        })
+    });
+    i.addEventListener('mouseleave', () => {
+        animate(i, {
+            scale: 1,
+            duration: 300
+        })
+    });
+}
+
+animate('.main',{
     opacity: 1,
     translateY: '0%',
     duration: 1500,
-    easing: 'easeOutElastic(3, 1.2)'
+    ease: 'outElastic(1, 1.2)'
 })
 
 createGrid();

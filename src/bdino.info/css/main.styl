@@ -35,6 +35,9 @@ footer
 .main
   position relative
   text-align center
+  top 25%
+  z-index 3
+  pointer-events none
 
 .avatarContainer
   width max-content
@@ -109,6 +112,7 @@ ul
   z-index 5
   position relative
   top -160px
+  pointer-events all
 
   &:last-of-type
     top -320px
@@ -120,6 +124,7 @@ ul
     top 2px
     position relative
     filter drop-shadow(10px 10px 20px black)
+    pointer-events all
 
     &:first-of-type
       padding-left 0
@@ -129,6 +134,5 @@ ul
       opacity 0.8
       transition all 0.4s ease-in-out
       position relative
+      pointer-events all
 
-      &:hover
-        transform scale(1.025)

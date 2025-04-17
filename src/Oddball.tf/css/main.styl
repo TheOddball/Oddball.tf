@@ -20,29 +20,9 @@ body
   background-size 200%
   height 100%
 
-  &.toggled
-    animation background-pan 10s linear infinite
-
-    .avatarContainer, h1
-      filter drop-shadow(10px 10px 20px #000)
-    
-    ul
-      li
-        img
-          filter drop-shadow(10px 10px 20px #000)
-
-
-    & > #title
-      opacity 0
-
-    & > #tiles
-      & > .tile
-        &:hover
-          opacity 0.1 !important
-
 @keyframes background-pan
   from
-    background-position 0% center
+    background-position 0 center
 
   to
     background-position -200% center
@@ -98,10 +78,6 @@ body
 .tile
   position relative
 
-  &:hover
-    &:before
-      background-color #141414
-
   &:before
     background-color #000
     content ''
@@ -123,12 +99,7 @@ ul
 
     img
       width 12vh
-      transition all 0.2s ease-in-out
-      transition filter 0.5s ease-in-out
       position relative
-
-      &:hover
-        transform scale(1.075)
 
 @media only screen and (max-width 700px)
   h1

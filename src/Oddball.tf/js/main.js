@@ -47,8 +47,7 @@ const handleAvatarClick = () => {
 }
 document.querySelector('.avatar').onclick = handleAvatarClick;
 
-let link = document.querySelectorAll('.lnk');
-for (let i of link) {
+for (let i of document.querySelectorAll('.lnk')) {
     i.addEventListener('mouseenter', () => {
         animate(i, {
             scale: 1.075,

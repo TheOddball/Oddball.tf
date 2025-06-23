@@ -11,7 +11,7 @@
     },
     "dependencies": {
         "@parcel/core": "^2.15.2",
-        "@parcel/packager-raw-url": "^2.15.2",
+        "@parcel/packager-raw-url": "^2.15.4",
         "@parcel/packager-xml": "^2.15.2",
         "@parcel/transformer-image": "^2.15.2",
         "@parcel/transformer-pug": "^2.15.2",

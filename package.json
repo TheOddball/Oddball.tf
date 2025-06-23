@@ -17,7 +17,7 @@
         "@parcel/transformer-pug": "^2.15.2",
         "@parcel/transformer-stylus": "^2.15.2",
         "@parcel/transformer-webmanifest": "^2.15.2",
-        "@parcel/transformer-xml": "^2.15.2",
+        "@parcel/transformer-xml": "^2.15.4",
         "@parcel/validator-eslint": "^2.15.2",
         "animejs": "^4.0.2",
         "parcel": "^2.15.2",

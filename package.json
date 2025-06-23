@@ -20,7 +20,7 @@
         "@parcel/transformer-xml": "^2.15.2",
         "@parcel/validator-eslint": "^2.15.2",
         "animejs": "^4.0.2",
-        "parcel": "^2.15.2",
+        "parcel": "^2.15.4",
         "parcel-reporter-static-files-copy": "^1.5.3",
         "wrangler": "^4.19.1"
     },

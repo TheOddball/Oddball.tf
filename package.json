@@ -22,7 +22,7 @@
         "animejs": "^4.0.2",
         "parcel": "^2.15.2",
         "parcel-reporter-static-files-copy": "^1.5.3",
-        "wrangler": "^4.19.1"
+        "wrangler": "^4.22.0"
     },
     "devDependencies": {
         "svgo": "^3.3.2"

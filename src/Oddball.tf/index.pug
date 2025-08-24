@@ -1,5 +1,5 @@
 doctype html
-html(lang='en' style='height:100%' charset='UTF-8')
+html(lang='en' style='height:100%')
     head
         title The Oddball
         meta(name="viewport" content="width=device-width, initial-scale=1")
@@ -23,6 +23,16 @@ html(lang='en' style='height:100%' charset='UTF-8')
 
         link(href='./css/main.styl' rel='stylesheet' type='text/css')
         script(src='js/main.js' type='module')
+    // Google tag (gtag.js)
+    script(
+        src="https://www.googletagmanager.com/gtag/js?id=G-4X21PX0YYQ"
+        async=""
+    )
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4X21PX0YYQ');
     body
         .tiles
         .main(style="opacity:0; transform:translateY(100%)")
@@ -46,15 +56,3 @@ html(lang='en' style='height:100%' charset='UTF-8')
                                 li
                                     a(href='https://vrchat.com/home/user/usr_a1d3f2b2-b4ca-41c7-855c-3f746bfa97ce')
                                         img.lnk(src='./img/site/vrchat.svg' title="VRChat")
-                                li
-                                    a(href='https://na.finalfantasyxiv.com/lodestone/character/28970243/')
-                                        img.lnk(src='./img/site/ffxiv.svg')
-        script.
-            (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-            ga('create', 'UA-53535626-2', 'auto');
-            ga('send', 'pageview');

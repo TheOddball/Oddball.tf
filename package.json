@@ -12,7 +12,7 @@
     "dependencies": {
         "@parcel/core": "^2.15.4",
         "@parcel/packager-raw-url": "^2.15.4",
-        "@parcel/packager-xml": "^2.15.4",
+        "@parcel/packager-xml": "^2.16.0",
         "@parcel/transformer-image": "^2.15.4",
         "@parcel/transformer-pug": "^2.15.4",
         "@parcel/transformer-stylus": "^2.15.4",
